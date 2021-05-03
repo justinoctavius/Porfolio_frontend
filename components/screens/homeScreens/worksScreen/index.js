@@ -1,7 +1,7 @@
-import { ShowMsg } from '../../helpers';
-import { Block } from '../../styles';
-import { Title } from '../common';
-import { WorkCollection } from './../blocks/';
+import { ShowMsg } from '../../../../helpers';
+import { Block } from '../../../../styles';
+import { Title } from '../../../common';
+import { WorkCollection } from '../../../blocks';
 
 const WorksScreen = ({ works, msg }) => {
   if (msg != 'success') {

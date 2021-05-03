@@ -1,6 +1,6 @@
-import { Block } from '../../styles';
-import { StudyCollection } from './../blocks';
-import { Title } from '../common';
+import { Block } from '../../../../styles';
+import { StudyCollection } from '../../../blocks';
+import { Title } from '../../../common';
 
 function StudiesScreen({ studies }) {
   return (

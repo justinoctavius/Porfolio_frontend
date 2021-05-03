@@ -1,4 +1,4 @@
-import { Block, H1, P } from '../../styles';
+import { Block, H1, P } from '../../../../styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTachometerAlt,

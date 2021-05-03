@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { themes } from '../../../constants';
+import { themes } from '../../../../constants';
 
 const ProjectScreenStyled = styled.div`
   display: grid;

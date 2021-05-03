@@ -1,5 +1,5 @@
-import { Block, H1 } from '../../styles';
-import { P, Span } from '../../styles';
+import { Block, H1 } from '../../../../styles';
+import { P, Span } from '../../../../styles';
 
 const WelcomeScreen = () => {
   return (
