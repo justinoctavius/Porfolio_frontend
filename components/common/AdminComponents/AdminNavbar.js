@@ -10,7 +10,7 @@ import {
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
 import { Block } from '../../../styles';
-import { Navbar } from '../../Blocks';
+import { Navbar } from '../../blocks/';
 
 const AdminNavbar = () => {
   return (

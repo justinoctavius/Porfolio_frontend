@@ -1,6 +1,6 @@
 import { themes } from '../../../constants';
-import { Block, H1, Strong } from '../../../styles';
-import { Button, Link, Title } from '../../common';
+import { Block, Strong } from '../../../styles';
+import { Button, Title } from '../../common';
 import ManageLayoutStyled from './style';
 
 const { colors } = themes;

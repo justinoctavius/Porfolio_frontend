@@ -5,7 +5,7 @@ import {
   faHouseUser,
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
-import { Navbar } from '../Blocks';
+import { Navbar } from '../blocks';
 
 const Footer = () => {
   return (

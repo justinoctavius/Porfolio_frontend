@@ -1,5 +1,5 @@
 import { Block } from '../../../../styles';
-import { SelectProjectInput } from '../../../Blocks';
+import { SelectProjectInput } from '../../../blocks';
 import { Form, Input } from '../../../common';
 
 const ManageLinkPage = ({

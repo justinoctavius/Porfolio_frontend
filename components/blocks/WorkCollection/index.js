@@ -1,5 +1,5 @@
-import { Collection } from './../Blocks';
-import Card from '../Blocks/Card';
+import { Collection } from '..';
+import Card from '../Card';
 
 const WorkCollection = ({ works }) => {
   return (
