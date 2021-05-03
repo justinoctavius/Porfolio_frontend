@@ -1,20 +1,30 @@
-import { Strong, Block, HeaderStyled, H2, A, Span } from '../../styles';
+import { Strong, Block, H2, A, Span } from '../../styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from '.';
 
 const Header = () => {
   return (
-    <HeaderStyled>
+    <Block
+      maxH="min-content"
+      flex
+      spaceBetween
+      middle
+      sticky
+      zIndex1
+      top="0"
+      bg="primary"
+      p2
+    >
       <Link href={'/admin'}>
         <Block>
           <H2>Justin colon</H2>
-          <Strong size1 third>
+          <Strong size2 third>
             Web developer
           </Strong>
         </Block>
       </Link>
-      <Block display={'flex'} justify={'flex-end'} align={'center'}>
+      <Block flex justifyEnd middle>
         <Link href={'/contact'} size2 bold>
           Contact{' '}
           <Span third>
@@ -23,7 +33,7 @@ const Header = () => {
           Me
         </Link>
       </Block>
-    </HeaderStyled>
+    </Block>
   );
 };
 

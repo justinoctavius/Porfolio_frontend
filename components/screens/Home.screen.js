@@ -8,14 +8,7 @@ import {
 
 const HomeScreen = () => {
   return (
-    <Block
-      bg={'primary'}
-      p3
-      display={'grid'}
-      height={'90vh'}
-      align={'space-around'}
-      style={{ textAlign: 'center' }}
-    >
+    <Block p3 grid height="100%" spaceAround style={{ textAlign: 'center' }}>
       <Block m1>
         <H1>
           <FontAwesomeIcon icon={faTachometerAlt} /> <br />

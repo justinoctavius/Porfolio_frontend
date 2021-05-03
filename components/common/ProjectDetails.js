@@ -1,4 +1,4 @@
-import { A, Block, H2, P, ProjectDetailsStyled, Strong } from '../../styles';
+import { A, Block, H2, P, ProjectDetailsStyled } from '../../styles';
 import Link from 'next/link';
 import env from '../../config/env';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

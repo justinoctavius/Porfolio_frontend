@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { themes } from '../../constants';
-import { A, Span } from '../../styles';
+import { A } from '../../styles';
 
 const LinkCommon = (props) => {
   const [hover, setHover] = useState(false);

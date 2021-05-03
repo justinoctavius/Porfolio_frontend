@@ -28,8 +28,54 @@ api.getAll = async () => {
     };
   }
 };
-api.add = () => {};
-api.delete = () => {};
-api.update = () => {};
+api.add = async (user_id, name, date, images, technologies) => {
+  try {
+    const data = await axios.post(`${env.BACKEND_API}/project/${user_id}`, {
+      name,
+      date,
+      images,
+      technologies,
+    });
+    return data.data;
+  } catch (error) {
+    console.log(error);
+    return {
+      msg: 'Ups unable to add the projects',
+      payload: null,
+      status: 500,
+    };
+  }
+};
+api.delete = async (project_id) => {
+  try {
+    const data = await axios.delete(`${env.BACKEND_API}/project/${project_id}`);
+    return data.data;
+  } catch (error) {
+    console.log(error);
+    return {
+      msg: 'Ups unable to delete the projects',
+      payload: null,
+      status: 500,
+    };
+  }
+};
+api.update = async (project_id, name, date, images, technologies) => {
+  try {
+    const data = await axios.put(`${env.BACKEND_API}/project/${project_id}`, {
+      name,
+      date,
+      images,
+      technologies,
+    });
+    return data.data;
+  } catch (error) {
+    console.log(error);
+    return {
+      msg: 'Ups unable to update the projects',
+      payload: null,
+      status: 500,
+    };
+  }
+};
 
 export default api;

@@ -1,0 +1,7 @@
+export const REQUEST_READER = 'REQUEST_READER';
+export const SUCCESS_READER = 'SUCCESS_READER';
+export const FAIL_READER = 'FAIL_READER';
+
+export const REQUEST_WRITER = 'REQUEST_WRITER';
+export const SUCCESS_WRITER = 'SUCCESS_WRITER';
+export const FAIL_WRITER = 'FAIL_WRITER';

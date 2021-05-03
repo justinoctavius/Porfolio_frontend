@@ -31,7 +31,7 @@ const ProjectDetailsStyled = styled.div`
   @media (min-width: ${themes.screen.s2}) {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    height: 100vh;
+    min-height: 87vh;
     & > div:nth-child(1) {
       position: relative;
       img {

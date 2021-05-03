@@ -1,13 +1,20 @@
-import { LayoutStyled } from '../../styles';
+import { Block } from '../../styles';
 import { Footer, Header } from '../common';
 
 const Layout = ({ children }) => {
   return (
-    <LayoutStyled>
+    <Block
+      grid
+      rows="5em 1fr min-content"
+      minH="100vh"
+      maxW="100vw"
+      minW="100vw"
+      maxH="100vh"
+    >
       <Header />
-      {children}
+      <Block scroll>{children}</Block>
       <Footer />
-    </LayoutStyled>
+    </Block>
   );
 };
 

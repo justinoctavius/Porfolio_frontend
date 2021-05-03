@@ -20,8 +20,40 @@ api.getAll = async () => {
     return { msg: 'Ups unable to get the work', payload: null, status: 500 };
   }
 };
-api.add = () => {};
-api.delete = () => {};
-api.update = () => {};
+api.add = async (user_id, name, date, description) => {
+  try {
+    const data = await axios.post(`${env.BACKEND_API}/work/${user_id}`, {
+      name,
+      date,
+      description,
+    });
+    return data.data;
+  } catch (error) {
+    console.log(error);
+    return { msg: 'Ups unable to add the work', payload: null, status: 500 };
+  }
+};
+api.delete = async (work_id) => {
+  try {
+    const data = await axios.delete(`${env.BACKEND_API}/work/${work_id}`);
+    return data.data;
+  } catch (error) {
+    console.log(error);
+    return { msg: 'Ups unable to delete the work', payload: null, status: 500 };
+  }
+};
+api.update = async (work_id, name, date, description) => {
+  try {
+    const data = await axios.put(`${env.BACKEND_API}/work/${work_id}`, {
+      name,
+      date,
+      description,
+    });
+    return data.data;
+  } catch (error) {
+    console.log(error);
+    return { msg: 'Ups unable to update the work', payload: null, status: 500 };
+  }
+};
 
 export default api;

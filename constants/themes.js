@@ -3,6 +3,7 @@ export const colors = {
   secondary: '#E0E0E0',
   third: '#219653',
   black: '#000000',
+  danger: '#a13628',
 };
 
 export const sizes = {
@@ -34,6 +35,7 @@ export const margin = {
 export const screen = {
   s1: '1280px',
   s2: '1024px',
-  s3: '800px',
-  s4: '375px',
+  s3: '768px',
+  s4: '475px',
+  s5: '375px',
 };

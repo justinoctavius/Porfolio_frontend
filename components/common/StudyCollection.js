@@ -1,5 +1,5 @@
-import { Collection } from '../../styles';
-import Card from './Card';
+import Collection from './Collection';
+import Card from './Card/';
 
 const StudyCollection = ({ studies }) => {
   return (

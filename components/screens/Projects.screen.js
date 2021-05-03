@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ShowMsg } from '../../helpers';
-import { Block, H1, ProjectScreenStyled } from '../../styles';
-import { ProjectCarousel, ProjectDetails } from '../common/';
+import { ProjectScreenStyled } from '../../styles';
+import { ProjectCarousel, ProjectDetails, Title } from '../common/';
 
 const ProjectsScreen = ({ projects, msg }) => {
   const [projectSelected, setProjectSelected] = useState({ id: '', index: 0 });
@@ -11,9 +11,7 @@ const ProjectsScreen = ({ projects, msg }) => {
   }
   return (
     <ProjectScreenStyled>
-      <Block p2>
-        <H1 center>Projects</H1>
-      </Block>
+      <Title center>Projects</Title>
       <ProjectDetails project={projects[projectSelected.index]} />
       <ProjectCarousel
         projects={projects}

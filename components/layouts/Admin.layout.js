@@ -1,12 +1,23 @@
-import { Block, AdminLayoutStyled } from '../../styles';
+import { Block } from '../../styles';
 import { AdminNavbar } from '../common';
+import ProviderWrapper from '../providers';
 
 const AdminLayout = ({ children }) => {
   return (
-    <AdminLayoutStyled>
+    <Block
+      grid
+      cols={'min-content 1fr'}
+      maxH="100vh"
+      maxW="100vw"
+      overflowHidden
+    >
       <AdminNavbar />
-      <Block>{children}</Block>
-    </AdminLayoutStyled>
+      <ProviderWrapper>
+        <Block minW="100%" maxW="100vmin">
+          {children}
+        </Block>
+      </ProviderWrapper>
+    </Block>
   );
 };
 

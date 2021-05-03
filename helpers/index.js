@@ -1,3 +1,4 @@
 import ShowMsg from './ShowMsg';
+import DataGridCollection from './DataGridCollection';
 
-export { ShowMsg };
+export { ShowMsg, DataGridCollection };

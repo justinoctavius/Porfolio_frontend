@@ -1,6 +1,6 @@
 import { ShowMsg } from '../../helpers';
-import { Block, H1 } from '../../styles';
-import { WorkCard } from '../common';
+import { Block } from '../../styles';
+import { Title } from '../common';
 import WorkCollection from '../common/WorkCollection';
 
 const WorksScreen = ({ works, msg }) => {
@@ -8,10 +8,8 @@ const WorksScreen = ({ works, msg }) => {
     return ShowMsg.error(msg);
   }
   return (
-    <Block bg={'primary'} p1>
-      <Block m2>
-        <H1 center>Experiences</H1>
-      </Block>
+    <Block>
+      <Title center>Experiences</Title>
       <WorkCollection works={works} />
     </Block>
   );

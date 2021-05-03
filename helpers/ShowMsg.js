@@ -4,7 +4,7 @@ const msg = {};
 
 msg.error = (msg) => {
   return (
-    <Block bg={'primary'} height={'90vh'}>
+    <Block bg={'danger'} absolute height={'10em'}>
       <P center>{msg}</P>
     </Block>
   );

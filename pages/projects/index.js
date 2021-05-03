@@ -4,7 +4,6 @@ import { Layout } from '../../components/layouts';
 import { ProjectsScreen } from '../../components/screens';
 
 const Projects = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
       <ProjectsScreen projects={data.payload} msg={data.msg} />

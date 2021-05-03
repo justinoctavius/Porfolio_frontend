@@ -1,3 +1,5 @@
-import select from './selectCssProperties';
+import * as select from './selector';
+import layoutActions from './layoutAction';
+import idGetter from './idGetter';
 
-export { select };
+export { select, layoutActions, idGetter };

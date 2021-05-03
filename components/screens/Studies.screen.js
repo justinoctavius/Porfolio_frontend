@@ -1,12 +1,10 @@
-import { Block, H1 } from '../../styles';
-import { StudyCollection } from '../common';
+import { Block } from '../../styles';
+import { StudyCollection, Title } from '../common';
 
 function StudiesScreen({ studies }) {
   return (
-    <Block bg="primary">
-      <Block p2>
-        <H1 center>Studies</H1>
-      </Block>
+    <Block>
+      <Title center>Studies</Title>
       <StudyCollection studies={studies} />
     </Block>
   );

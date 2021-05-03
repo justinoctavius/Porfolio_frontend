@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 import { themes } from '../../../constants';
-import { select } from '../../../utils';
+import { Block } from '../../common';
 
-const ProjectCardStyled = styled.div`
-  border: ${select.border};
-  border-radius: ${select.radius};
+const ProjectCardStyled = styled(Block)`
   cursor: pointer;
-
   & > div:nth-child(2) {
     display: none;
   }

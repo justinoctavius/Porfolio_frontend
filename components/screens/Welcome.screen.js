@@ -3,20 +3,14 @@ import { P, Span } from '../../styles';
 
 const WelcomeScreen = () => {
   return (
-    <Block
-      gradient
-      display={'flex'}
-      justify={'center'}
-      align={'center'}
-      height={'90vh'}
-    >
+    <Block gradient flex center middle height="100%">
       <Block>
         <H1 center size={'15vw'}>
           Wel
           <Span third>c</Span>
           <Span primary>ome</Span>
         </H1>
-        <Block display={'flex'} justify={'space-between'}>
+        <Block flex spaceBetween>
           <P>Making awesome</P>
           <P primary>webs every day</P>
         </Block>

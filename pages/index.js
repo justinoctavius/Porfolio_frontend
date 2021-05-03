@@ -4,11 +4,9 @@ import { Block } from '../styles';
 
 export default function Home() {
   return (
-    <Layout next={'/projects'}>
-      <Block display={'grid'}>
-        <WelcomeScreen />
-        <HomeScreen />
-      </Block>
+    <Layout>
+      <WelcomeScreen />
+      <HomeScreen />
     </Layout>
   );
 }
