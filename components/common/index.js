@@ -2,7 +2,6 @@ import { AdminNavbar, AdminHeader } from './AdminComponents/';
 import Button from './Button';
 import ErrorMsg from './ErrorMsg';
 import Form from './Form';
-import Header from './Header';
 import Input from './Input';
 import Link from './Link';
 import ProjectDetails from './ProjectDetails';
@@ -18,7 +17,6 @@ export {
   Button,
   ErrorMsg,
   Form,
-  Header,
   Input,
   Link,
   ProjectDetails,

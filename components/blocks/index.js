@@ -5,12 +5,14 @@ import { Navbar } from './Navbar';
 import FooterNavbar from './FooterNavbar';
 import WorkCollection from './WorkCollection';
 import StudyCollection from './StudyCollection';
+import Header from './Header';
 
 export {
   SelectProjectInput,
   Collection,
   Card,
   FooterNavbar,
+  Header,
   Navbar,
   WorkCollection,
   StudyCollection,

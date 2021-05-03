@@ -1,7 +1,7 @@
-import { Strong, Block, H2, A, Span } from '../../styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Link } from '.';
+import { Block, H2, Span, Strong } from '../../../styles';
+import { Link } from '../../common';
 
 const Header = () => {
   return (

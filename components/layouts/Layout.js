@@ -1,6 +1,5 @@
 import { Block } from '../../styles';
-import { FooterNavbar } from './../blocks/';
-import { Header } from '../common';
+import { FooterNavbar, Header } from './../blocks/';
 
 const Layout = ({ children }) => {
   return (
