@@ -6,8 +6,8 @@ import AdminCertificatesPage from './Page';
 const AdminCertificatesScreen = () => {
   const [collection, setCollection] = useState();
   const [selected, setSelected] = useState();
-  const { state, api } = useCertificateApi();
-  const { payload, error, loading } = state;
+  const { readerState, api } = useCertificateApi();
+  const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
     if (payload) {

@@ -3,7 +3,7 @@ import { SelectInput } from '../../common';
 import { useProjectApi } from '../../hooks';
 
 const SelectProjectInput = ({ setSelected, selected }) => {
-  const { state, api } = useProjectApi();
+  const { readerState, api } = useProjectApi();
   useEffect(() => {
     api.getAll();
   }, []);
@@ -12,7 +12,7 @@ const SelectProjectInput = ({ setSelected, selected }) => {
     <SelectInput
       setSelected={setSelected}
       selected={selected}
-      options={state?.payload}
+      options={readerState?.payload}
       element_id="project_id"
       label="Project"
     />

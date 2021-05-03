@@ -4,12 +4,8 @@ import { techAction } from '../../redux/actions';
 
 const useTechApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.techs);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.techs);
+  const writeState = useSelector((state) => state.tech);
 
   const api = {
     getAll: async () => await techAction.getAll()(dispatch),
@@ -20,7 +16,7 @@ const useTechApi = () => {
       await techAction.update(tech_id, name, level)(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useTechApi;

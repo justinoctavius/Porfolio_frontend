@@ -4,12 +4,8 @@ import { studyAction } from '../../redux/actions';
 
 const useStudyApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.techs);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.studies);
+  const writeState = useSelector((state) => state.study);
 
   const api = {
     getAll: async () => await studyAction.getAll()(dispatch),
@@ -27,7 +23,7 @@ const useStudyApi = () => {
       )(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useStudyApi;

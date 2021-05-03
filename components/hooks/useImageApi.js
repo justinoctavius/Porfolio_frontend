@@ -4,12 +4,8 @@ import { imageAction } from '../../redux/actions';
 
 const useImageApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.techs);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.images);
+  const writeState = useSelector((state) => state.image);
 
   const api = {
     getAll: async () => await imageAction.getAll()(dispatch),
@@ -20,7 +16,7 @@ const useImageApi = () => {
       await imageAction.update(image_id, name, image)(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useImageApi;

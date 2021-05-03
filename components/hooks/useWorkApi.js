@@ -4,12 +4,8 @@ import { workAction } from '../../redux/actions';
 
 const useWorkApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.techs);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.works);
+  const writeState = useSelector((state) => state.work);
 
   const api = {
     getAll: async () => await workAction.getAll()(dispatch),
@@ -21,7 +17,7 @@ const useWorkApi = () => {
       await workAction.update(name, url, work_id)(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useWorkApi;

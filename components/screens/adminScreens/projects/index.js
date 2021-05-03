@@ -6,8 +6,8 @@ import AdminProjectsPage from './Page';
 const AdminProjectsScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { state, api } = useProjectApi();
-  const { payload, error, loading } = state;
+  const { readerState, api } = useProjectApi();
+  const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
     if (payload) {

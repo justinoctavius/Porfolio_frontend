@@ -4,12 +4,8 @@ import { linkAction } from '../../redux/actions';
 
 const useLinkApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.links);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.links);
+  const writeState = useSelector((state) => state.link);
 
   const api = {
     getAll: async () => await linkAction.getAll()(dispatch),
@@ -21,7 +17,7 @@ const useLinkApi = () => {
       await linkAction.update(name, url, link_id)(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useLinkApi;

@@ -8,7 +8,7 @@ const ManageLinkScreen = ({ data, mode }) => {
   const [url, setUrl] = useState(data?.url || '');
   const [projectId, setProjectId] = useState(data?.project_id || '');
   const [errorMsg, setErrorMsg] = useState('');
-  const { addState, updateState, api } = useLinkApi();
+  const { writeState, api } = useLinkApi();
 
   const addAction = () => {
     if (verifyFields()) {
@@ -30,11 +30,11 @@ const ManageLinkScreen = ({ data, mode }) => {
   };
 
   const getErrorMsg = () => {
-    return addState.error || updateState.error || errorMsg;
+    return writeState.error || errorMsg;
   };
 
   const getSuccessMsg = () => {
-    if (addState.success || updateState.success) {
+    if (writeState.success) {
       return 'success';
     }
   };

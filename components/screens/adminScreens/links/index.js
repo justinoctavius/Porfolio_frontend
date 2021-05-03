@@ -6,8 +6,8 @@ import AdminLinksPage from './Page';
 const AdminLinksScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { state, addState, updateState, deleteState, api } = useLinkApi();
-  const { payload, error, loading } = state;
+  const { readerState, writeState, api } = useLinkApi();
+  const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
     if (payload) {
@@ -23,7 +23,7 @@ const AdminLinksScreen = () => {
 
   useEffect(() => {
     api.getAll();
-  }, [addState.loading, updateState.loading, deleteState.loading]);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

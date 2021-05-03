@@ -4,10 +4,10 @@ import { useStudyApi } from '../../../hooks';
 import AdminStudiesPage from './Page';
 
 const AdminStudiesScreen = () => {
-  const { state, api } = useStudyApi();
+  const { readerState, api } = useStudyApi();
   const [collection, setCollection] = useState();
   const [selected, setSelected] = useState();
-  const { payload, error, loading } = state;
+  const { payload, error, loading } = readerState;
   const getCollection = async () => {
     if (payload) {
       const dataGridCollection = await new DataGridCollection().fill(payload);

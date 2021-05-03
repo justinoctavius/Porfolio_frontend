@@ -6,8 +6,8 @@ import AdminTechsPage from './Page';
 const AdminTechsScreen = () => {
   const [collection, setCollection] = useState();
   const [selected, setSelected] = useState();
-  const { state, api } = useTechApi();
-  const { payload, error, loading } = state;
+  const { readerState, api } = useTechApi();
+  const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
     if (payload) {

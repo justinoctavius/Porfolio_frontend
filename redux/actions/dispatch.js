@@ -1,13 +1,10 @@
-import {
-  FAIL_READER,
+const dispatchReader = async (
+  query,
+  dispatch,
   REQUEST_READER,
   SUCCESS_READER,
-  REQUEST_WRITER,
-  FAIL_WRITER,
-  SUCCESS_WRITER,
-} from '../../constants';
-
-const dispatchReader = async (query, dispatch) => {
+  FAIL_READER
+) => {
   try {
     dispatch({ type: REQUEST_READER });
     const { msg, payload, status } = await query();
@@ -21,7 +18,13 @@ const dispatchReader = async (query, dispatch) => {
   }
 };
 
-const dispatchWriter = async (query, dispatch) => {
+const dispatchWriter = async (
+  query,
+  dispatch,
+  REQUEST_WRITER,
+  SUCCESS_WRITER,
+  FAIL_WRITER
+) => {
   try {
     dispatch({ type: REQUEST_WRITER });
     const { msg, payload, status } = await query();

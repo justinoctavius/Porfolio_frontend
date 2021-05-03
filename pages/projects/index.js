@@ -1,13 +1,13 @@
 import React from 'react';
 import { projectApi } from '../../apis';
-import { Layout } from '../../components/layouts';
+import { HomeLayout } from '../../components/layouts';
 import { ProjectsScreen } from '../../components/screens';
 
 const Projects = ({ data }) => {
   return (
-    <Layout>
+    <HomeLayout>
       <ProjectsScreen projects={data.payload} msg={data.msg} />
-    </Layout>
+    </HomeLayout>
   );
 };
 

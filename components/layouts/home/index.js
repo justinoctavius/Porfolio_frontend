@@ -1,7 +1,7 @@
-import { Block } from '../../styles';
-import { FooterNavbar, Header } from './../blocks/';
+import { Block } from '../../../styles';
+import { FooterNavbar, Header } from './../../blocks/';
 
-const Layout = ({ children }) => {
+const HomeLayout = ({ children }) => {
   return (
     <Block
       grid
@@ -17,4 +17,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default HomeLayout;

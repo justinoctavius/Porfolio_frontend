@@ -4,12 +4,8 @@ import { projectAction } from '../../redux/actions';
 
 const useProjectApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.projects);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.projects);
+  const writeState = useSelector((state) => state.project);
 
   const api = {
     getAll: async () => await projectAction.getAll()(dispatch),
@@ -34,7 +30,7 @@ const useProjectApi = () => {
       )(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useProjectApi;

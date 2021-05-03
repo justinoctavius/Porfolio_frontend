@@ -6,8 +6,8 @@ import AdminWorksPage from './Page';
 const AdminWorksScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { state, api } = useWorkApi();
-  const { payload, error, loading } = state;
+  const { readerState, api } = useWorkApi();
+  const { payload, error, loading } = readerState;
   const getCollection = async () => {
     if (payload) {
       const dataGridCollection = await new DataGridCollection().fill(payload);

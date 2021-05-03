@@ -6,8 +6,8 @@ import AdminImagesPage from './Page';
 const AdminImagesScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { state, api } = useImageApi();
-  const { payload, error, loading } = state;
+  const { readerState, api } = useImageApi();
+  const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
     if (payload) {

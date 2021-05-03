@@ -4,12 +4,8 @@ import { certificateAction } from '../../redux/actions';
 
 const useCertificateApi = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.techs);
-  const deleteState = useSelector((state) => state.delete);
-  const addState = useSelector((state) => state.add);
-  const updateState = useSelector((state) => state.update);
-
-  useEffect(() => {}, [state]);
+  const readerState = useSelector((state) => state.certificates);
+  const writeState = useSelector((state) => state.certificate);
 
   const api = {
     getAll: async () => await certificateAction.getAll()(dispatch),
@@ -23,7 +19,7 @@ const useCertificateApi = () => {
       await certificateAction.update(name, image_id, certificate_id)(dispatch),
   };
 
-  return { state, api, deleteState, addState, updateState, dispatch };
+  return { readerState, api, writeState, dispatch };
 };
 
 export default useCertificateApi;

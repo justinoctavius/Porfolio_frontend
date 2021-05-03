@@ -5,8 +5,8 @@ import {
   WorksScreen,
   StudiesScreen,
 } from './homeScreens';
-import AdminScreen from './Admin.screen';
 import {
+  AdminScreen,
   AdminCertificatesScreen,
   AdminImagesScreen,
   AdminLinksScreen,
@@ -16,7 +16,7 @@ import {
   AdminTechsScreen,
   AdminWorksScreen,
 } from './adminScreens';
-import { ManageLinkScreen } from './manageScreens';
+import { ManageLinkScreen, ManageProjectScreen } from './manageScreens';
 
 export {
   WelcomeScreen,
@@ -40,4 +40,4 @@ export {
 };
 
 //Manage screens
-export { ManageLinkScreen };
+export { ManageLinkScreen, ManageProjectScreen };

@@ -1,6 +1,6 @@
-import { Block } from '../../styles';
-import { AdminNavbar } from '../blocks';
-import ProviderWrapper from '../providers';
+import { Block } from '../../../styles';
+import { AdminNavbar } from '../../blocks';
+import ProviderWrapper from '../../providers';
 
 const AdminLayout = ({ children }) => {
   return (

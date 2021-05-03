@@ -18,7 +18,7 @@ const SelectInputPage = ({
         defaultValue={selected}
         onChange={(e) => setSelected(e.target.value)}
       >
-        <option value="">Select a project</option>
+        <option value="">Select a {label}</option>
         {options &&
           options.length > 0 &&
           options.map((opt) => {

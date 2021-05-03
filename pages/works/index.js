@@ -1,13 +1,13 @@
 import React from 'react';
 import { workApi } from '../../apis';
-import { Layout } from '../../components/layouts';
+import { HomeLayout } from '../../components/layouts';
 import { WorksScreen } from '../../components/screens';
 
 const Jobs = ({ data }) => {
   return (
-    <Layout>
+    <HomeLayout>
       <WorksScreen works={data.payload} msg={data.msg} />
-    </Layout>
+    </HomeLayout>
   );
 };
 

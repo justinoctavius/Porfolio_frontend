@@ -1,3 +1,4 @@
+import AdminScreen from './Admin.screen';
 import AdminProjectsScreen from './projects';
 import AdminStudiesScreen from './studies';
 import AdminWorksScreen from './works';
@@ -8,6 +9,7 @@ import AdminTechsScreen from './techs';
 import AdminSettingsScreen from './AdminSettings.screen';
 
 export {
+  AdminScreen,
   AdminProjectsScreen,
   AdminStudiesScreen,
   AdminWorksScreen,
