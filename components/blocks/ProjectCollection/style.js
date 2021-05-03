@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 import { themes } from '../../../constants';
+import { Block } from '../../../styles';
 
-const ProjectCarouselStyled = styled.div`
-  display: flex;
-  overflow-x: scroll;
-  max-width: 100vw;
+const ProjectCollectionStyled = styled(Block)`
   & > div {
-    height: min-content;
-    display: block;
     margin: 0;
-    cursor: pointer;
     transition: 0.3s;
     div {
       width: 15em;
@@ -35,4 +30,4 @@ const ProjectCarouselStyled = styled.div`
   }
 `;
 
-export default ProjectCarouselStyled;
+export default ProjectCollectionStyled;

@@ -1,21 +1,24 @@
-import { ProjectCarouselStyled } from '../../styles';
-import { Card } from '../blocks';
+import Card from '../Card';
+import ProjectCollectionStyled from './style';
 
-const ProjectCarousel = ({ projects, selected, setSelected }) => {
+const ProjectCollection = ({ projects, selected, setSelected }) => {
   return (
-    <ProjectCarouselStyled>
+    <ProjectCollectionStyled flex scroll maxW="100vw">
       {projects?.map((project, index) => (
         <Card
           description={project?.description}
           image={project?.images[0]?.url}
           title={project?.name}
           bColor={project?.project_id == selected.id ? 'third' : 'secondary'}
+          block
+          pointer
+          height="min-content"
           onClick={() => setSelected({ index, id: project.project_id })}
           key={index}
         />
       ))}
-    </ProjectCarouselStyled>
+    </ProjectCollectionStyled>
   );
 };
 
-export default ProjectCarousel;
+export default ProjectCollection;

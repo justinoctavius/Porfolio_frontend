@@ -6,6 +6,7 @@ import { AdminHeader, AdminNavbar } from './Admin';
 import FooterNavbar from './FooterNavbar';
 import WorkCollection from './WorkCollection';
 import StudyCollection from './StudyCollection';
+import ProjectCollection from './ProjectCollection';
 import Header from './Header';
 
 export {
@@ -17,6 +18,7 @@ export {
   Navbar,
   WorkCollection,
   StudyCollection,
+  ProjectCollection,
   AdminHeader,
   AdminNavbar,
 };
