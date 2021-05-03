@@ -1,7 +1,12 @@
 import styled from 'styled-components';
-import { sizes } from '../../constants/themes';
-import { borders, colors, margins, paddings } from '../styles';
-import { select } from './../../utils';
+import {
+  borders,
+  colors,
+  margins,
+  paddings,
+  sizes,
+} from '../../../styles/styles';
+import { select } from '../../../utils';
 
 const ButtonStyled = styled.button`
   cursor: ${select.cursor};

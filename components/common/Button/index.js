@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { themes } from '../../constants';
-import { Block } from '../../styles';
+import { themes } from '../../../constants';
+import ButtonStyled from './style';
 
 const Button = (props) => {
   const [hover, setHover] = useState(false);
@@ -14,7 +14,7 @@ const Button = (props) => {
   };
 
   return (
-    <Block
+    <ButtonStyled
       {...props}
       bg={!hover ? color : themes.colors[color] + 'dd'}
       pointer
@@ -28,7 +28,7 @@ const Button = (props) => {
       onClick={onClick}
     >
       {children}
-    </Block>
+    </ButtonStyled>
   );
 };
 
