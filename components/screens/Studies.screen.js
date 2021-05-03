@@ -1,5 +1,5 @@
 import { Block } from '../../styles';
-import StudyCollection from './../blocks/StudyCollection'; //error when i remove the next path and only put the block
+import { StudyCollection } from './../blocks';
 import { Title } from '../common';
 
 function StudiesScreen({ studies }) {

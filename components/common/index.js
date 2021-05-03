@@ -1,7 +1,6 @@
 import { AdminNavbar, AdminHeader } from './AdminComponents/';
 import Button from './Button';
 import ErrorMsg from './ErrorMsg';
-import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
 import Input from './Input';
@@ -18,7 +17,6 @@ export { AdminHeader, AdminNavbar };
 export {
   Button,
   ErrorMsg,
-  Footer,
   Form,
   Header,
   Input,

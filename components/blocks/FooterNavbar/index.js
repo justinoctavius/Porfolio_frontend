@@ -1,13 +1,13 @@
-import { Block } from '../../styles';
+import { Block } from '../../../styles';
 import {
   faBrain,
   faBusinessTime,
   faHouseUser,
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
-import { Navbar } from '../blocks';
+import { Navbar } from '..';
 
-const Footer = () => {
+const FooterNavbar = () => {
   return (
     <Block>
       <Navbar items={items} layout={'bottom'} />
@@ -22,4 +22,4 @@ const items = [
   { name: 'Studies', url: '/studies', icon: faBrain },
 ];
 
-export default Footer;
+export default FooterNavbar;

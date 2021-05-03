@@ -1,5 +1,6 @@
 import { Block } from '../../styles';
-import { Footer, Header } from '../common';
+import { FooterNavbar } from './../blocks/';
+import { Header } from '../common';
 
 const Layout = ({ children }) => {
   return (
@@ -13,7 +14,7 @@ const Layout = ({ children }) => {
     >
       <Header />
       <Block scroll>{children}</Block>
-      <Footer />
+      <FooterNavbar />
     </Block>
   );
 };
