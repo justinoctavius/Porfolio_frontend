@@ -9,7 +9,6 @@ import Link from './Link';
 import ProjectDetails from './ProjectDetails';
 import ProjectCarousel from './ProjectCarousel';
 import ProjectCard from './ProjectCard';
-import StudyCollection from './StudyCollection';
 import SelectInput from './selectInput';
 import Table from './Table';
 import Title from './Title';
@@ -27,7 +26,6 @@ export {
   ProjectDetails,
   ProjectCarousel,
   ProjectCard,
-  StudyCollection,
   SelectInput,
   Table,
   Title,

@@ -1,4 +1,5 @@
-import { Collection, Card } from '../blocks';
+import Card from '../Card';
+import Collection from '../Collection';
 
 const StudyCollection = ({ studies }) => {
   return (
