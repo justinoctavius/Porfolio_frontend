@@ -1,13 +1,3 @@
-import {
-  ProjectCardStyled,
-  ProjectCarouselStyled,
-  ProjectDetailsStyled,
-  ProjectScreenStyled,
-} from './projectStyles';
+import { ProjectScreenStyled } from './projectStyles';
 
-export {
-  ProjectCardStyled,
-  ProjectCarouselStyled,
-  ProjectDetailsStyled,
-  ProjectScreenStyled,
-};
+export { ProjectScreenStyled };

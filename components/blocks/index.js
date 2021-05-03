@@ -7,6 +7,7 @@ import FooterNavbar from './FooterNavbar';
 import WorkCollection from './WorkCollection';
 import StudyCollection from './StudyCollection';
 import ProjectCollection from './ProjectCollection';
+import ProjectDetails from './projectDetails';
 import Header from './Header';
 
 export {
@@ -19,6 +20,7 @@ export {
   WorkCollection,
   StudyCollection,
   ProjectCollection,
+  ProjectDetails,
   AdminHeader,
   AdminNavbar,
 };

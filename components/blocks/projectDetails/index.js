@@ -1,6 +1,9 @@
-import { A, Block, H2, P, ProjectDetailsStyled } from '../../styles';
+import ProjectDetailsStyled from './style';
+import { A, Block, H2, P } from '../../../styles';
+
 import Link from 'next/link';
-import env from '../../config/env';
+import env from '../../../config/env';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
