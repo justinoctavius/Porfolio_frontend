@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { themes } from '../../../constants';
-import { Block } from '../../../styles/common/';
+import { Block } from '../../../styles/common';
 
 const CollectionStyled = styled(Block)`
   @media (min-width: ${themes.screen.s3}) {

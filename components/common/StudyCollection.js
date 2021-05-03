@@ -1,4 +1,4 @@
-import Collection from './Collection';
+import { Collection } from './../Blocks';
 import Card from './Card/';
 
 const StudyCollection = ({ studies }) => {
