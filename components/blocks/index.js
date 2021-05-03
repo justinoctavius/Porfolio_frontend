@@ -2,6 +2,7 @@ import SelectProjectInput from './selectProjectInput';
 import Collection from './Collection';
 import Card from './Card';
 import { Navbar } from './Navbar';
+import { AdminHeader, AdminNavbar } from './Admin';
 import FooterNavbar from './FooterNavbar';
 import WorkCollection from './WorkCollection';
 import StudyCollection from './StudyCollection';
@@ -16,4 +17,6 @@ export {
   Navbar,
   WorkCollection,
   StudyCollection,
+  AdminHeader,
+  AdminNavbar,
 };

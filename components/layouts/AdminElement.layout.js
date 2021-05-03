@@ -1,5 +1,5 @@
 import { Block } from '../../styles';
-import { AdminHeader } from '../common';
+import { AdminHeader } from '../blocks';
 
 const AdminElementLayout = ({
   children,

@@ -1,6 +1,6 @@
-import { Button, Link } from '../..';
+import { Button, Link } from '../../../common';
 import { Block, Strong } from '../../../../styles';
-import Title from '../../Title';
+import Title from '../../../common/Title';
 
 const AdminHeaderPage = ({
   title,

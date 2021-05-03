@@ -9,8 +9,8 @@ import {
   faLink,
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
-import { Block } from '../../../styles';
-import { Navbar } from '../../blocks/';
+import { Block } from '../../../../styles';
+import { Navbar } from '../..';
 
 const AdminNavbar = () => {
   return (
