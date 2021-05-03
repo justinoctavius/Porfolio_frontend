@@ -1,12 +1,14 @@
 import CardPage from './page';
 
-const Card = ({ date, description, image, title }) => {
+const Card = (props) => {
+  const { date, description, image, title } = props;
   return (
     <CardPage
       date={date}
       description={description}
       image={image}
       title={title}
+      {...props}
     />
   );
 };

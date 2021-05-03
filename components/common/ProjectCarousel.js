@@ -1,15 +1,17 @@
 import { ProjectCarouselStyled } from '../../styles';
-import ProjectCard from './ProjectCard';
+import { Card } from '../blocks';
 
 const ProjectCarousel = ({ projects, selected, setSelected }) => {
   return (
     <ProjectCarouselStyled>
       {projects?.map((project, index) => (
-        <ProjectCard
-          onClick={() => setSelected({ id: project?.project_id, index })}
-          border={selected?.id == project?.project_id ? 'third' : null}
-          project={project}
-          key={project?.project_id}
+        <Card
+          description={project?.description}
+          image={project?.images[0]?.url}
+          title={project?.name}
+          bColor={project?.project_id == selected.id ? 'third' : 'secondary'}
+          onClick={() => setSelected({ index, id: project.project_id })}
+          key={index}
         />
       ))}
     </ProjectCarouselStyled>

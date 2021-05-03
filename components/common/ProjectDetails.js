@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectDetails = ({ project }) => {
-  console.log(project);
   return (
     <ProjectDetailsStyled>
       <Block>

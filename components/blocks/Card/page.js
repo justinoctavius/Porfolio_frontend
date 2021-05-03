@@ -2,7 +2,8 @@ import env from '../../../config/env';
 import { Block, H2, P } from '../../../styles';
 import CardStyled from './style';
 
-const CardPage = ({ title, description, image, date }) => {
+const CardPage = (props) => {
+  const { title, description, image, date } = props;
   return (
     <CardStyled
       grid
@@ -12,6 +13,7 @@ const CardPage = ({ title, description, image, date }) => {
       minH="15em"
       cols={image ? '1fr 2fr' : '1fr'}
       image={image}
+      {...props}
     >
       {image && (
         <Block>
@@ -25,9 +27,11 @@ const CardPage = ({ title, description, image, date }) => {
         <Block>
           <P>{description}</P>
         </Block>
-        <Block>
-          <time>{new Date(date).toDateString()}</time>
-        </Block>
+        {date && (
+          <Block>
+            <time>{new Date(date).toDateString()}</time>
+          </Block>
+        )}
       </Block>
     </CardStyled>
   );

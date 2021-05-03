@@ -2,7 +2,7 @@ import Button from './Button/';
 import ErrorMsg from './ErrorMsg';
 import Form from './Form';
 import Input from './Input';
-import Link from './Link';
+import Link from './Link/';
 import ProjectDetails from './ProjectDetails';
 import ProjectCarousel from './ProjectCarousel';
 import ProjectCard from './ProjectCard';

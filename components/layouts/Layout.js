@@ -6,10 +6,9 @@ const Layout = ({ children }) => {
     <Block
       grid
       rows="5em 1fr min-content"
-      minH="100vh"
-      maxW="100vw"
-      minW="100vw"
-      maxH="100vh"
+      height="100vh"
+      width="100vw"
+      style={{ overflow: 'hidden' }}
     >
       <Header />
       <Block scroll>{children}</Block>

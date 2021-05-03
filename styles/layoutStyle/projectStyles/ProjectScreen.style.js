@@ -4,7 +4,7 @@ import { themes } from '../../../constants';
 const ProjectScreenStyled = styled.div`
   display: grid;
   grid-template-rows: 10em min-content;
-  max-height: min-content;
+  height: 100%;
 
   @media (min-width: ${themes.screen.s2}) {
     display: grid;

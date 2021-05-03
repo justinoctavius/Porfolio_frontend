@@ -1,5 +1,5 @@
 import Card from '../Card';
-import Collection from '../Collection';
+import Collection from '../Collection/page';
 
 const StudyCollection = ({ studies }) => {
   return (

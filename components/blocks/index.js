@@ -1,5 +1,5 @@
 import SelectProjectInput from './selectProjectInput';
-import Collection from './Collection';
+import Collection from './Collection/page';
 import Card from './Card';
 import { Navbar } from './Navbar';
 import { AdminHeader, AdminNavbar } from './Admin';

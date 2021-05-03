@@ -29,7 +29,7 @@ layoutProperties.right = ({ layout, show }) => {
 
 layoutProperties.bottom = ({ layout, show }) => {
   const px = show ? '0px' : '-100%';
-  return layoutActions.AllDirections('auto', '0px', 'auto', px, layout);
+  return layoutActions.AllDirections('auto', 'auto', 'auto', px, layout);
 };
 
 layoutProperties.left = ({ layout, show }) => {
@@ -41,10 +41,7 @@ const NavbarStyled = styled(Block)`
   & > div:nth-child(1) {
     z-index: 99;
     position: absolute;
-    top: ${({ layout }) => layoutProperties.top({ layout, show: true })};
-    right: ${({ layout }) => layoutProperties.right({ layout, show: true })};
-    left: ${({ layout }) => layoutProperties.left({ layout, show: true })};
-    bottom: ${({ layout }) => layoutProperties.bottom({ layout, show: true })};
+    bottom: 0px;
     padding: ${themes.padding.p1};
   }
   & > div:nth-child(2) {
@@ -55,9 +52,7 @@ const NavbarStyled = styled(Block)`
     right: ${layoutProperties.right};
     left: ${layoutProperties.left};
     bottom: ${layoutProperties.bottom};
-    overflow: scroll;
     transition: 0.7s;
-
     & > div {
       display: flex;
       flex-direction: ${layoutProperties.direction};
@@ -67,7 +62,7 @@ const NavbarStyled = styled(Block)`
       padding: ${themes.padding.p1};
       height: ${layoutProperties.height};
       width: ${layoutProperties.width};
-      overflow: scroll;
+      overflow-x: scroll;
     }
   }
 

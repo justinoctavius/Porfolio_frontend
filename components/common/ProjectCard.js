@@ -2,7 +2,6 @@ import env from '../../config/env';
 import { Block, P, ProjectCardStyled, Strong } from '../../styles';
 
 const ProjectCard = ({ project, border, onClick }) => {
-  console.log(project);
   return (
     <ProjectCardStyled border={border} radius1 onClick={onClick}>
       <Block>
