@@ -1,4 +1,5 @@
 import SelectProjectInput from './selectProjectInput';
 import Collection from './Collection';
+import Card from './Card';
 
-export { SelectProjectInput, Collection };
+export { SelectProjectInput, Collection, Card };

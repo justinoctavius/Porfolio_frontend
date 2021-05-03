@@ -1,5 +1,4 @@
 import { AdminNavbar, AdminHeader } from './AdminComponents/';
-import Card from './Card/';
 import Button from './Button';
 import ErrorMsg from './ErrorMsg';
 import Footer from './Footer';
@@ -22,7 +21,6 @@ export { AdminHeader, AdminNavbar };
 
 export {
   Button,
-  Card,
   ErrorMsg,
   Footer,
   Form,
