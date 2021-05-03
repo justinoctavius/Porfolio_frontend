@@ -1,7 +1,7 @@
 import { faBars, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { themes } from '../../../../constants';
-import { Block, Strong } from '../../../../styles';
+import { Block } from '../../../../styles';
 
 const ToggleShowBtnPage = (props) => {
   const { show, setShow } = props;

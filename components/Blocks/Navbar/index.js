@@ -3,4 +3,5 @@ import Item from './Item';
 import ToggleShowBtn from './ToggleShowBtn';
 import ItemCollection from './ItemCollection';
 
-export { Navbar, Item, ToggleShowBtn, ItemCollection };
+export { Item, ToggleShowBtn, ItemCollection };
+export default Navbar;

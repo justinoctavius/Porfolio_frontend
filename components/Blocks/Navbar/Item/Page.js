@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from '../..';
+import { Link } from '../../../common';
 import ItemStyled from './style';
 
 const ItemPage = ({ url, icon, name }) => {
