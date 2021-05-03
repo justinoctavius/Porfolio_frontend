@@ -1,11 +1,11 @@
-import { Block } from '../../../styles';
 import {
   faBrain,
   faBusinessTime,
   faHouseUser,
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
-import { Navbar } from '..';
+import { Block } from '../../../../styles/';
+import { Navbar } from '../../Navbar';
 
 const FooterNavbar = () => {
   return (

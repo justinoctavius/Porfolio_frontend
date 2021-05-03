@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ShowMsg } from '../../helpers';
-import { ProjectScreenStyled } from '../../styles';
-import { ProjectCollection, ProjectDetails } from '../blocks';
-import { Title } from '../common/';
+import { ShowMsg } from '../../../helpers';
+import ProjectScreenStyled from './style';
+import { ProjectCollection, ProjectDetails } from '../../blocks';
+import { Title } from '../../common';
 
 const ProjectsScreen = ({ projects, msg }) => {
   const [projectSelected, setProjectSelected] = useState({ id: '', index: 0 });
