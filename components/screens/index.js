@@ -16,7 +16,14 @@ import {
   AdminTechsScreen,
   AdminWorksScreen,
 } from './adminScreens';
-import { ManageLinkScreen, ManageProjectScreen } from './manageScreens';
+import {
+  ManageLinkScreen,
+  ManageProjectScreen,
+  ManageCertificateScreen,
+  ManageTechScreen,
+  ManageWorkScreen,
+  ManageStudyScreen,
+} from './manageScreens';
 
 export {
   WelcomeScreen,
@@ -40,4 +47,11 @@ export {
 };
 
 //Manage screens
-export { ManageLinkScreen, ManageProjectScreen };
+export {
+  ManageLinkScreen,
+  ManageProjectScreen,
+  ManageCertificateScreen,
+  ManageTechScreen,
+  ManageWorkScreen,
+  ManageStudyScreen,
+};

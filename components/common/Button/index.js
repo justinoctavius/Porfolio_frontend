@@ -19,7 +19,6 @@ const Button = (props) => {
       bg={!hover ? color : themes.colors[color] + 'dd'}
       pointer
       p1
-      radius1
       flex
       middle
       center

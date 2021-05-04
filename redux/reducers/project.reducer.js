@@ -22,7 +22,7 @@ const reducerProjectReader = (
 };
 
 const reducerProjectWriter = (
-  state = { loading: false, payload: {}, error: null },
+  state = { loading: false, payload: [], error: null },
   action
 ) => {
   return reducerState.writer(

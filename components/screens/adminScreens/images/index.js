@@ -6,7 +6,7 @@ import AdminImagesPage from './Page';
 const AdminImagesScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { readerState, api } = useImageApi();
+  const { readerState, writeState, api } = useImageApi();
   const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
@@ -18,11 +18,12 @@ const AdminImagesScreen = () => {
 
   const deleteAction = async () => {
     api.delete(selected);
+    setSelected('');
   };
 
   useEffect(() => {
     api.getAll();
-  }, []);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

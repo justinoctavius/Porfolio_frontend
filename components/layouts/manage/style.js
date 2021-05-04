@@ -3,7 +3,7 @@ import { themes } from '../../../constants';
 import { Block } from '../../../styles';
 
 const ManageLayoutStyled = styled(Block)`
-  div {
+  & > div {
     & > div:nth-child(2) {
       scrollbar-width: none;
     }

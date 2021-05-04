@@ -19,8 +19,8 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
         grid
         bg={colors.primary + '55'}
         rows="min-content 1fr min-content"
-        minH="50vh"
-        minW="50vw"
+        minH="70em"
+        maxW="max-content"
         border
         radius2
         bColor="third"
@@ -38,18 +38,20 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
           <Button
             m1
             color="third"
+            radius1
             minW="8em"
             onClick={mode == 'update' ? updateAction : addAction}
           >
-            <Strong size2>{mode == 'update' ? 'Save' : 'Add'}</Strong>
+            <Strong>{mode == 'update' ? 'Save' : 'Add'}</Strong>
           </Button>
           <Button
             m1
             color="danger"
+            radius1
             minW="8em"
             onClick={() => window.history.back()}
           >
-            <Strong size2>Cancel</Strong>
+            <Strong>Close</Strong>
           </Button>
         </Block>
       </Block>

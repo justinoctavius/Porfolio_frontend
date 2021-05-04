@@ -22,12 +22,12 @@ const AdminHeaderPage = ({
       {selected && (
         <Block bg="primary" flex middle justifyEnd>
           <Button color="secondary">
-            <Link primary size2 bold href={updateUrl}>
+            <Link primary bold href={updateUrl}>
               Update
             </Link>
           </Button>
           <Button m1 color="danger" onClick={deleteAction}>
-            <Strong size2>Delete</Strong>
+            <Strong>Delete</Strong>
           </Button>
         </Block>
       )}

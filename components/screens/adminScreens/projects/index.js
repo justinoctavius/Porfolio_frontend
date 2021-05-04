@@ -6,7 +6,7 @@ import AdminProjectsPage from './Page';
 const AdminProjectsScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { readerState, api } = useProjectApi();
+  const { readerState, writeState, api } = useProjectApi();
   const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
@@ -18,11 +18,12 @@ const AdminProjectsScreen = () => {
 
   const deleteAction = () => {
     api.delete(selected);
+    setSelected('');
   };
 
   useEffect(() => {
     api.getAll();
-  }, []);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

@@ -6,7 +6,7 @@ import AdminWorksPage from './Page';
 const AdminWorksScreen = () => {
   const [selected, setSelected] = useState();
   const [collection, setCollection] = useState();
-  const { readerState, api } = useWorkApi();
+  const { readerState, writeState, api } = useWorkApi();
   const { payload, error, loading } = readerState;
   const getCollection = async () => {
     if (payload) {
@@ -17,11 +17,12 @@ const AdminWorksScreen = () => {
 
   const deleteAction = () => {
     api.delete(selected);
+    setSelected('');
   };
 
   useEffect(() => {
     api.getAll();
-  }, []);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

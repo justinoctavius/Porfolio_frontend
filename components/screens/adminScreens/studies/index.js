@@ -4,10 +4,11 @@ import { useStudyApi } from '../../../hooks';
 import AdminStudiesPage from './Page';
 
 const AdminStudiesScreen = () => {
-  const { readerState, api } = useStudyApi();
+  const { readerState, writeState, api } = useStudyApi();
   const [collection, setCollection] = useState();
   const [selected, setSelected] = useState();
   const { payload, error, loading } = readerState;
+
   const getCollection = async () => {
     if (payload) {
       const dataGridCollection = await new DataGridCollection().fill(payload);
@@ -17,11 +18,12 @@ const AdminStudiesScreen = () => {
 
   const deleteAction = () => {
     api.delete(selected);
+    setSelected('');
   };
 
   useEffect(() => {
     api.getAll();
-  }, []);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

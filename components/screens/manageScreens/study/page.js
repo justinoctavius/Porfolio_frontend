@@ -5,14 +5,12 @@ import { Form, Input } from '../../../common';
 const ManageProjectPage = ({
   name,
   date,
-  images,
-  technologies,
   description,
+  place,
   setName,
   setDate,
-  setImages,
-  setTechnologies,
   setDescription,
+  setPlace,
   error,
   success,
 }) => {
@@ -27,17 +25,13 @@ const ManageProjectPage = ({
           minLength="3"
         />
         <Input type="date" label="Date" setValue={setDate} value={date} />
+        <Input type="text" label="Place" setValue={setPlace} value={place} />
         <Input
           type="text"
           label="Description"
           setValue={setDescription}
           value={description}
         />
-        <SelectTechInput
-          selected={technologies}
-          setSelected={setTechnologies}
-        />
-        <SelectImageInput selected={images} setSelected={setImages} />
       </Form>
     </Block>
   );

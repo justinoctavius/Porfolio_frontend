@@ -6,7 +6,7 @@ import AdminCertificatesPage from './Page';
 const AdminCertificatesScreen = () => {
   const [collection, setCollection] = useState();
   const [selected, setSelected] = useState();
-  const { readerState, api } = useCertificateApi();
+  const { readerState, writeState, api } = useCertificateApi();
   const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
@@ -18,11 +18,12 @@ const AdminCertificatesScreen = () => {
 
   const deleteAction = async () => {
     api.delete(selected);
+    setSelected('');
   };
 
   useEffect(() => {
     api.getAll();
-  }, []);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

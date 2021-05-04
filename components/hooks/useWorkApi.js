@@ -10,11 +10,11 @@ const useWorkApi = () => {
   const api = {
     getAll: async () => await workAction.getAll()(dispatch),
     get: async (work_id) => await workAction.get(work_id)(dispatch),
-    add: async (name, url, project_id) =>
-      await workAction.add(name, url, project_id)(dispatch),
+    add: async (user_id, name, date, description) =>
+      await workAction.add(user_id, name, date, description)(dispatch),
     delete: async (work_id) => await workAction.delete(work_id)(dispatch),
-    update: async (name, url, work_id) =>
-      await workAction.update(name, url, work_id)(dispatch),
+    update: async (work_id, name, date, description) =>
+      await workAction.update(work_id, name, date, description)(dispatch),
   };
 
   return { readerState, api, writeState, dispatch };

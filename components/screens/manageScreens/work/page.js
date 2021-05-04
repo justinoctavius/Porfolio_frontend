@@ -1,18 +1,14 @@
 import { Block } from '../../../../styles';
-import { SelectImageInput, SelectTechInput } from '../../../blocks';
+import { SelectLevelInput } from '../../../blocks';
 import { Form, Input } from '../../../common';
 
-const ManageProjectPage = ({
+const ManageTechPage = ({
+  setDate,
+  setName,
+  setDescription,
   name,
   date,
-  images,
-  technologies,
   description,
-  setName,
-  setDate,
-  setImages,
-  setTechnologies,
-  setDescription,
   error,
   success,
 }) => {
@@ -33,14 +29,9 @@ const ManageProjectPage = ({
           setValue={setDescription}
           value={description}
         />
-        <SelectTechInput
-          selected={technologies}
-          setSelected={setTechnologies}
-        />
-        <SelectImageInput selected={images} setSelected={setImages} />
       </Form>
     </Block>
   );
 };
 
-export default ManageProjectPage;
+export default ManageTechPage;

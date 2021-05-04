@@ -6,7 +6,7 @@ import AdminTechsPage from './Page';
 const AdminTechsScreen = () => {
   const [collection, setCollection] = useState();
   const [selected, setSelected] = useState();
-  const { readerState, api } = useTechApi();
+  const { readerState, writeState, api } = useTechApi();
   const { payload, error, loading } = readerState;
 
   const getCollection = async () => {
@@ -18,11 +18,12 @@ const AdminTechsScreen = () => {
 
   const deleteAction = () => {
     api.delete(selected);
+    setSelected('');
   };
 
   useEffect(() => {
     api.getAll();
-  }, []);
+  }, [writeState.loading]);
 
   useEffect(() => {
     getCollection();

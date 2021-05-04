@@ -7,6 +7,7 @@ const SelectInputPage = ({
   setSelected,
   selected,
   element_id,
+  element_name,
 }) => {
   const [focus, setFocus] = useState(false);
   return (
@@ -28,7 +29,7 @@ const SelectInputPage = ({
                 selected={opt[element_id] == selected}
                 key={opt[element_id]}
               >
-                {opt.name}
+                {opt.name || opt[element_name]}
               </option>
             );
           })}

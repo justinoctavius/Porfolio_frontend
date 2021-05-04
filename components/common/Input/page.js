@@ -8,7 +8,6 @@ const InputPage = ({ value, type, setValue, Label, Error }) => {
       <Label />
       <InputStyled
         width="20em"
-        height="1em"
         bg="transparent"
         border
         bColor="secondary"

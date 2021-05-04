@@ -8,9 +8,9 @@ export const colors = {
 
 export const sizes = {
   presentation: '96px',
-  h1: '3.6em',
-  h2: '2.4em',
-  p: '1.8em',
+  h1: '2.6em',
+  h2: '2em',
+  p: '1.5em',
   strong: '1em',
 };
 
@@ -21,15 +21,15 @@ export const radius = {
 };
 
 export const padding = {
-  p1: '1em',
-  p2: '3em',
-  p3: '6em',
+  p1: '.5em',
+  p2: '2em',
+  p3: '3em',
 };
 
 export const margin = {
-  m1: '1em',
-  m2: '3em',
-  m3: '6em',
+  m1: '.5em',
+  m2: '2em',
+  m3: '3em',
 };
 
 export const screen = {

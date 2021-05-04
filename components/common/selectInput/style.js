@@ -9,7 +9,7 @@ const SelectStyled = styled(Block)`
   width: 100%;
   display: flex;
   justify-content: right;
-
+  padding: ${themes.padding.p1};
   label {
     transition: 0.3s;
     position: absolute;
@@ -27,7 +27,7 @@ const SelectStyled = styled(Block)`
     color: ${colors.secondary};
   }
   & > select:focus {
-    width: 20em;
+    width: 100%;
     border-color: ${colors.third};
   }
 `;
