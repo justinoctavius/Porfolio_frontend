@@ -35,8 +35,10 @@ const InputContainerStyled = styled(Block)`
   label {
     transition: 0.3s;
     position: absolute;
-    top: ${({ focus, value }) => (focus || value ? 0 : '25%')};
-    left: ${({ focus, value }) => (focus || value ? 0 : '8%')};
+    top: ${({ focus, value, selected }) =>
+      focus || value || selected ? 0 : '25%'};
+    left: ${({ focus, value, selected }) =>
+      focus || value || selected ? 0 : '8%'};
     color: ${({ focus }) =>
       !focus ? themes.colors.secondary : themes.colors.third};
   }

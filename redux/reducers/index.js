@@ -15,6 +15,8 @@ import { reducerTechReader, reducerTechWriter } from './tech.reducer';
 
 import { reducerWorkReader, reducerWorkWriter } from './work.reducer';
 
+import { reducerUserReader } from './user.reducer';
+
 export { reducerCertificateReader, reducerCertificateWriter };
 
 export { reducerImageReader, reducerImageWriter };
@@ -28,3 +30,5 @@ export { reducerStudyReader, reducerStudyWriter };
 export { reducerTechReader, reducerTechWriter };
 
 export { reducerWorkReader, reducerWorkWriter };
+
+export { reducerUserReader };

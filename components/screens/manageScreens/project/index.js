@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useProjectApi } from '../../../hooks';
+import { useProjectApi, useUserApi } from '../../../hooks';
 import { ManageLayout } from '../../../layouts';
 import ManageProjectPage from './page';
 
@@ -10,15 +10,16 @@ const ManageProjectScreen = ({ data, mode }) => {
   const [userId, setUserId] = useState('');
   const [images, setImages] = useState([]);
   const [technologies, setTechnologies] = useState([]);
-
   const [errorMsg, setErrorMsg] = useState('');
-  const { writeState, api } = useProjectApi();
 
-  console.log(images, technologies);
+  const { writeState, api } = useProjectApi();
+  const {
+    readerState: { payload },
+  } = useUserApi();
 
   const addAction = () => {
     if (verifyFields()) {
-      api.add('', name, date, images, technologies);
+      api.add(payload.user_id, name, date, images, technologies);
     }
   };
 

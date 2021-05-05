@@ -3,10 +3,11 @@ import ErrorMsg from './ErrorMsg';
 import Form from './Form';
 import Input from './Input';
 import Link from './Link/';
-import SelectInput from './selectInput';
 import Table from './Table';
 import Title from './Title';
+import SelectInput from './selectInput';
 import MultiSelects from './MultiSelects';
+import SelectFileInput from './SelectFileInput';
 
 export {
   Button,
@@ -14,8 +15,9 @@ export {
   Form,
   Input,
   Link,
-  SelectInput,
   Table,
   Title,
+  SelectInput,
   MultiSelects,
+  SelectFileInput,
 };

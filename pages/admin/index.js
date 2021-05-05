@@ -1,11 +1,14 @@
 import { AdminLayout } from '../../components/layouts';
+import ProviderWrapper from '../../components/providers';
 import { AdminScreen } from '../../components/screens';
 
 const Admin = () => {
   return (
-    <AdminLayout>
-      <AdminScreen />
-    </AdminLayout>
+    <ProviderWrapper>
+      <AdminLayout>
+        <AdminScreen />
+      </AdminLayout>
+    </ProviderWrapper>
   );
 };
 

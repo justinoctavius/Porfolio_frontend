@@ -15,6 +15,7 @@ import {
   AdminStudiesScreen,
   AdminTechsScreen,
   AdminWorksScreen,
+  LoginScreen,
 } from './adminScreens';
 import {
   ManageLinkScreen,
@@ -23,6 +24,7 @@ import {
   ManageTechScreen,
   ManageWorkScreen,
   ManageStudyScreen,
+  ManageImageScreen,
 } from './manageScreens';
 
 export {
@@ -44,6 +46,7 @@ export {
   AdminStudiesScreen,
   AdminTechsScreen,
   AdminWorksScreen,
+  LoginScreen,
 };
 
 //Manage screens
@@ -54,4 +57,5 @@ export {
   ManageTechScreen,
   ManageWorkScreen,
   ManageStudyScreen,
+  ManageImageScreen,
 };

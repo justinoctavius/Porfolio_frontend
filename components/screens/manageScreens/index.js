@@ -4,6 +4,7 @@ import ManageCertificateScreen from './certificate';
 import ManageTechScreen from './tech';
 import ManageWorkScreen from './work';
 import ManageStudyScreen from './study';
+import ManageImageScreen from './image';
 
 export {
   ManageLinkScreen,
@@ -12,4 +13,5 @@ export {
   ManageTechScreen,
   ManageWorkScreen,
   ManageStudyScreen,
+  ManageImageScreen,
 };

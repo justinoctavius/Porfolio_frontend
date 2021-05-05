@@ -1,8 +1,19 @@
+import { useEffect } from 'react';
+import { SESSION } from '../../../constants';
 import { Block } from '../../../styles';
 import { AdminNavbar } from '../../blocks';
 import ProviderWrapper from '../../providers';
+import { LoginScreen } from '../../screens';
+import { useRouter } from 'next/router';
 
 const AdminLayout = ({ children }) => {
+  const router = useRouter();
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !sessionStorage?.getItem(SESSION)) {
+      router.push('/admin/login');
+    }
+  }, []);
+
   return (
     <Block
       grid
@@ -11,8 +22,8 @@ const AdminLayout = ({ children }) => {
       maxW="100vw"
       overflowHidden
     >
-      <AdminNavbar />
       <ProviderWrapper>
+        <AdminNavbar />
         <Block minW="100%" maxW="100vmin">
           {children}
         </Block>

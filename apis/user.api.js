@@ -4,7 +4,7 @@ import { SESSION } from '../constants';
 
 const api = {};
 
-api.signin = async (email, password) => {
+api.signIn = async (email, password) => {
   try {
     const data = await axios.post(`${env.BACKEND_API}/user`, {
       email,
@@ -16,6 +16,11 @@ api.signin = async (email, password) => {
   } catch (error) {
     return { msg: 'Unable to signin', payload: null, status: 500 };
   }
+};
+
+api.getByToken = async () => {
+  try {
+  } catch (error) {}
 };
 
 export default api;

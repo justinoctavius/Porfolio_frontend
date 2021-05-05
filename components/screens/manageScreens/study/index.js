@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useStudyApi } from '../../../hooks';
+import { useStudyApi, useUserApi } from '../../../hooks';
 import { ManageLayout } from '../../../layouts';
 import ManageStudyPage from './page';
 
@@ -11,10 +11,13 @@ const ManageStudyScreen = ({ data, mode }) => {
 
   const [errorMsg, setErrorMsg] = useState('');
   const { writeState, api } = useStudyApi();
+  const {
+    readerState: { payload },
+  } = useUserApi();
 
   const addAction = () => {
     if (verifyFields()) {
-      api.add('', name, date, place, description);
+      api.add(payload.user_id, name, date, place, description);
     }
   };
 

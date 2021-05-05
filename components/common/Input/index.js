@@ -19,6 +19,7 @@ const Input = ({
   errorNumeric,
   errorLink,
   type,
+  selected,
 }) => {
   const [errorMsg, setErrorMsg] = useState();
 
@@ -90,6 +91,7 @@ const Input = ({
       setValue={setValueHandler}
       Error={Error}
       Label={Label}
+      selected={selected}
       type={type}
     />
   );

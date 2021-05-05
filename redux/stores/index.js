@@ -13,6 +13,7 @@ import {
   reducerStudyWriter,
   reducerTechReader,
   reducerTechWriter,
+  reducerUserReader,
   reducerWorkReader,
   reducerWorkWriter,
 } from '../reducers';
@@ -32,6 +33,7 @@ const rootReducer = combineReducers({
   tech: reducerTechWriter,
   works: reducerWorkReader,
   work: reducerWorkWriter,
+  user: reducerUserReader,
 });
 
 const store = createStore(rootReducer, applyMiddleware(reduxThunk));

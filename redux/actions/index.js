@@ -5,6 +5,7 @@ import linkAction from './link.action';
 import studyAction from './study.action';
 import workAction from './work.action';
 import imageAction from './image.action';
+import userAction from './user.action';
 
 export {
   techAction,
@@ -14,4 +15,5 @@ export {
   studyAction,
   workAction,
   imageAction,
+  userAction,
 };

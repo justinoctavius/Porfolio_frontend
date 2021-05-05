@@ -5,6 +5,7 @@ import useLinkApi from './useLinkApi';
 import useStudyApi from './useStudyApi';
 import useWorkApi from './useWorkApi';
 import useImageApi from './useImageApi';
+import useUserApi from './useUserApi';
 
 export {
   useTechApi,
@@ -14,4 +15,5 @@ export {
   useStudyApi,
   useWorkApi,
   useImageApi,
+  useUserApi,
 };

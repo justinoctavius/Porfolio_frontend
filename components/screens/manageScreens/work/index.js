@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useWorkApi } from '../../../hooks';
+import { useUserApi, useWorkApi } from '../../../hooks';
 import { ManageLayout } from '../../../layouts';
 import ManageWorkPage from './page';
 
@@ -9,11 +9,13 @@ const ManageWorkScreen = ({ data, mode }) => {
   const [description, setDescription] = useState(data?.description || '');
   const [errorMsg, setErrorMsg] = useState('');
   const { writeState, api } = useWorkApi();
+  const {
+    readerState: { payload },
+  } = useUserApi();
 
   const addAction = async () => {
     if (verifyFields()) {
-      await api.add('', name, date, description);
-      //change '' for userId from useUserApi
+      await api.add(payload.user_id, name, date, description);
     }
   };
 

@@ -7,8 +7,10 @@ import AdminCertificatesScreen from './certificates';
 import AdminImagesScreen from './images';
 import AdminTechsScreen from './techs';
 import AdminSettingsScreen from './AdminSettings.screen';
+import LoginScreen from './login';
 
 export {
+  LoginScreen,
   AdminScreen,
   AdminProjectsScreen,
   AdminStudiesScreen,

@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { InputContainerStyled, InputStyled } from './style';
 
-const InputPage = ({ value, type, setValue, Label, Error }) => {
+const InputPage = ({ value, type, setValue, Label, Error, selected }) => {
   const [focus, setFocus] = useState(false);
   return (
-    <InputContainerStyled error={Error()} focus={focus} value={value}>
+    <InputContainerStyled
+      error={Error()}
+      focus={focus}
+      selected={selected}
+      value={value}
+    >
       <Label />
       <InputStyled
         width="20em"

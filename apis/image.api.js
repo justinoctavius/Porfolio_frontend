@@ -21,7 +21,15 @@ api.getAll = async () => {
 };
 api.add = async (name, image) => {
   try {
-    const data = await axios.post(`${env.BACKEND_API}/image`, { name, image });
+    const form = new FormData();
+
+    form.append('name', name);
+    form.append('image', image);
+
+    const data = await axios.post(`${env.BACKEND_API}/image`, form, {
+      headers: { 'content-type': 'multipart/form-data' },
+    });
+
     return data.data;
   } catch (error) {
     return { msg: 'Ups unable to add the image', payload: null, status: 500 };
