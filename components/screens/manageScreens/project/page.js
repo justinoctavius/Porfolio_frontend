@@ -1,5 +1,10 @@
 import { Block } from '../../../../styles';
-import { SelectImageInput, SelectTechInput } from '../../../blocks';
+import {
+  SelectImageInput,
+  SelectTechInput,
+  MultiSelectsTechs,
+  MultiSelectsImages,
+} from '../../../blocks';
 import { Form, Input } from '../../../common';
 
 const ManageProjectPage = ({
@@ -33,11 +38,12 @@ const ManageProjectPage = ({
           setValue={setDescription}
           value={description}
         />
-        <SelectTechInput
-          selected={technologies}
-          setSelected={setTechnologies}
+        <MultiSelectsTechs
+          selects={technologies}
+          setSelects={setTechnologies}
         />
-        <SelectImageInput selected={images} setSelected={setImages} />
+
+        <MultiSelectsImages selects={images} setSelects={setImages} />
       </Form>
     </Block>
   );

@@ -1,4 +1,4 @@
 import rebooting from './rebooting.style';
-import scale from './scale.style';
+import { scale, scaleIn } from './scale.style';
 
-export { rebooting, scale };
+export { rebooting, scale, scaleIn };

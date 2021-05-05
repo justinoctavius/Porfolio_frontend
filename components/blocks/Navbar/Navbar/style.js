@@ -56,7 +56,7 @@ const NavbarStyled = styled(Block)`
     & > div {
       display: flex;
       flex-direction: ${layoutProperties.direction};
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       text-align: center;
       padding: ${themes.padding.p1};

@@ -22,6 +22,7 @@ const Button = (props) => {
       flex
       middle
       center
+      radius1
       onMouseOver={_hoverHandler}
       onMouseLeave={_leaveHandler}
       onClick={onClick}

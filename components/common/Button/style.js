@@ -8,8 +8,10 @@ import {
 } from '../../../styles/styles';
 import { select } from '../../../utils';
 
-const ButtonStyled = styled.button`
+const ButtonStyled = styled.div`
   cursor: ${select.cursor};
+  display: inline-block;
+  text-align: center;
   ${sizes}
   ${colors}
   ${paddings}

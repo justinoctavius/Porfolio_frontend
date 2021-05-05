@@ -15,9 +15,9 @@ export const sizes = {
 };
 
 export const radius = {
-  r1: '.5em',
-  r2: '1em',
-  r3: '2em',
+  r1: '.2em',
+  r2: '.5em',
+  r3: '1em',
 };
 
 export const padding = {

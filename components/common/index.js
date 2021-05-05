@@ -6,5 +6,16 @@ import Link from './Link/';
 import SelectInput from './selectInput';
 import Table from './Table';
 import Title from './Title';
+import MultiSelects from './MultiSelects';
 
-export { Button, ErrorMsg, Form, Input, Link, SelectInput, Table, Title };
+export {
+  Button,
+  ErrorMsg,
+  Form,
+  Input,
+  Link,
+  SelectInput,
+  Table,
+  Title,
+  MultiSelects,
+};
