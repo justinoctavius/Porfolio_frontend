@@ -1,5 +1,6 @@
 import axios from 'axios';
 import env from '../config/env';
+import { SESSION } from '../constants';
 
 const api = {};
 
@@ -21,12 +22,17 @@ api.getAll = async () => {
 };
 api.add = async (user_id, name, date, place, description) => {
   try {
-    const data = await axios.post(`${env.BACKEND_API}/study/${user_id}`, {
-      name,
-      date,
-      place,
-      description,
-    });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.post(
+      `${env.BACKEND_API}/study/${user_id}`,
+      {
+        name,
+        date,
+        place,
+        description,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return { msg: 'Ups unable to add the study', payload: null, status: 500 };
@@ -34,7 +40,10 @@ api.add = async (user_id, name, date, place, description) => {
 };
 api.delete = async (study_id) => {
   try {
-    const data = await axios.delete(`${env.BACKEND_API}/study/${study_id}`);
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.delete(`${env.BACKEND_API}/study/${study_id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
     return data.data;
   } catch (error) {
     return {
@@ -46,12 +55,17 @@ api.delete = async (study_id) => {
 };
 api.update = async (study_id, name, date, place, description) => {
   try {
-    const data = await axios.put(`${env.BACKEND_API}/study/${study_id}`, {
-      name,
-      date,
-      place,
-      description,
-    });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.put(
+      `${env.BACKEND_API}/study/${study_id}`,
+      {
+        name,
+        date,
+        place,
+        description,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return {

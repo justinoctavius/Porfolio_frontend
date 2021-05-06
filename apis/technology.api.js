@@ -1,5 +1,6 @@
 import axios from 'axios';
 import env from '../config/env';
+import { SESSION } from '../constants';
 
 const api = {};
 
@@ -29,7 +30,12 @@ api.getAll = async () => {
 };
 api.add = async (name, level) => {
   try {
-    const data = await axios.post(`${env.BACKEND_API}/tech/`, { name, level });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.post(
+      `${env.BACKEND_API}/tech/`,
+      { name, level },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return {
@@ -41,7 +47,11 @@ api.add = async (name, level) => {
 };
 api.delete = async (technology_id) => {
   try {
-    const data = await axios.delete(`${env.BACKEND_API}/tech/${technology_id}`);
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.delete(
+      `${env.BACKEND_API}/tech/${technology_id}`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return {
@@ -53,10 +63,15 @@ api.delete = async (technology_id) => {
 };
 api.update = async (technology_id, name, level) => {
   try {
-    const data = await axios.put(`${env.BACKEND_API}/tech/${technology_id}`, {
-      name,
-      level,
-    });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.put(
+      `${env.BACKEND_API}/tech/${technology_id}`,
+      {
+        name,
+        level,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return {

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import env from '../config/env';
+import { SESSION } from '../constants';
 
 const api = {};
 
@@ -22,11 +23,16 @@ api.getAll = async () => {
 };
 api.add = async (user_id, name, date, description) => {
   try {
-    const data = await axios.post(`${env.BACKEND_API}/work/${user_id}`, {
-      name,
-      date,
-      description,
-    });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.post(
+      `${env.BACKEND_API}/work/${user_id}`,
+      {
+        name,
+        date,
+        description,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     console.log(error);
@@ -35,7 +41,10 @@ api.add = async (user_id, name, date, description) => {
 };
 api.delete = async (work_id) => {
   try {
-    const data = await axios.delete(`${env.BACKEND_API}/work/${work_id}`);
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.delete(`${env.BACKEND_API}/work/${work_id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
     return data.data;
   } catch (error) {
     console.log(error);
@@ -44,11 +53,16 @@ api.delete = async (work_id) => {
 };
 api.update = async (work_id, name, date, description) => {
   try {
-    const data = await axios.put(`${env.BACKEND_API}/work/${work_id}`, {
-      name,
-      date,
-      description,
-    });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.put(
+      `${env.BACKEND_API}/work/${work_id}`,
+      {
+        name,
+        date,
+        description,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     console.log(error);

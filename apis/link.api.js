@@ -1,5 +1,6 @@
 import axios from 'axios';
 import env from '../config/env';
+import { SESSION } from '../constants';
 
 const api = {};
 
@@ -21,10 +22,15 @@ api.getAll = async () => {
 };
 api.add = async (name, url, project_id) => {
   try {
-    const data = await axios.post(`${env.BACKEND_API}/link/${project_id}`, {
-      name,
-      url,
-    });
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.post(
+      `${env.BACKEND_API}/link/${project_id}`,
+      {
+        name,
+        url,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return {
@@ -36,7 +42,11 @@ api.add = async (name, url, project_id) => {
 };
 api.delete = async (link_id) => {
   try {
-    const data = await axios.delete(`${env.BACKEND_API}/link/${link_id}`);
+    const token = sessionStorage.getItem(SESSION);
+
+    const data = await axios.delete(`${env.BACKEND_API}/link/${link_id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
     return data.data;
   } catch (error) {
     return {
@@ -48,10 +58,16 @@ api.delete = async (link_id) => {
 };
 api.update = async (name, url, link_id) => {
   try {
-    const data = await axios.put(`${env.BACKEND_API}/link/${link_id}`, {
-      name,
-      url,
-    });
+    const token = sessionStorage.getItem(SESSION);
+
+    const data = await axios.put(
+      `${env.BACKEND_API}/link/${link_id}`,
+      {
+        name,
+        url,
+      },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
     return data.data;
   } catch (error) {
     return {

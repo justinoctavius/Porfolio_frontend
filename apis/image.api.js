@@ -1,5 +1,6 @@
 import axios from 'axios';
 import env from '../config/env';
+import { SESSION } from '../constants';
 
 const api = {};
 
@@ -21,13 +22,16 @@ api.getAll = async () => {
 };
 api.add = async (name, image) => {
   try {
+    const token = sessionStorage.getItem(SESSION);
     const form = new FormData();
-
     form.append('name', name);
     form.append('image', image);
 
     const data = await axios.post(`${env.BACKEND_API}/image`, form, {
-      headers: { 'content-type': 'multipart/form-data' },
+      headers: {
+        'content-type': 'multipart/form-data',
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     return data.data;
@@ -37,7 +41,10 @@ api.add = async (name, image) => {
 };
 api.delete = async (image_id) => {
   try {
-    const data = await axios.delete(`${env.BACKEND_API}/image/${image_id}`);
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.delete(`${env.BACKEND_API}/image/${image_id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
     return data.data;
   } catch (error) {
     return {
@@ -49,9 +56,13 @@ api.delete = async (image_id) => {
 };
 api.update = async (image_id, name, image) => {
   try {
-    const data = await axios.put(`${env.BACKEND_API}/image/${image_id}`, {
-      name,
-      image,
+    const token = sessionStorage.getItem(SESSION);
+    const form = new FormData();
+    form.append('name', name);
+    form.append('image', image);
+    const data = await axios.put(`${env.BACKEND_API}/image/${image_id}`, form, {
+      headers: { Authorization: `Bearer ${token}` },
+      'Content-Type': 'multipart/form-data',
     });
     return data.data;
   } catch (error) {
