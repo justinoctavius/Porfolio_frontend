@@ -12,10 +12,10 @@ const MsgPopup = ({ msg, bg, center, right, left }) => {
       absolute
       flex
       fColumn
-      left={(center && '40%') || (right && 'auto') || (left && '0px')}
-      right={(center && '40%') || (right && '0px') || (left && 'auto')}
+      left={(center && '50%') || (right && 'auto') || (left && '0px')}
+      right={(center && '50%') || (right && '0px') || (left && 'auto')}
       height={'8em'}
-      minW={'15em'}
+      width={'15em'}
       m1
     >
       <Block flex width="100%" justifyEnd>

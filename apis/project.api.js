@@ -29,7 +29,7 @@ api.getAll = async () => {
     };
   }
 };
-api.add = async (user_id, name, date, images, technologies) => {
+api.add = async (user_id, name, date, description, images, technologies) => {
   try {
     const token = sessionStorage.getItem(SESSION);
     const data = await axios.post(
@@ -37,6 +37,7 @@ api.add = async (user_id, name, date, images, technologies) => {
       {
         name,
         date,
+        description,
         images,
         technologies,
       },
@@ -69,7 +70,14 @@ api.delete = async (project_id) => {
     };
   }
 };
-api.update = async (project_id, name, date, images, technologies) => {
+api.update = async (
+  project_id,
+  name,
+  date,
+  description,
+  images,
+  technologies
+) => {
   try {
     const token = sessionStorage.getItem(SESSION);
     const data = await axios.put(
@@ -77,6 +85,7 @@ api.update = async (project_id, name, date, images, technologies) => {
       {
         name,
         date,
+        description,
         images,
         technologies,
       },

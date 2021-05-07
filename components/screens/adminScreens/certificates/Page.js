@@ -1,4 +1,4 @@
-import { Table } from '../../../common';
+import { ErrorMsg, Table } from '../../../common';
 import { AdminElementLayout } from '../../../layouts';
 
 const AdminCertificatesPage = ({

@@ -3,7 +3,7 @@ import { colors, margin, padding, radius } from '../../../../constants/themes';
 import { Block } from '../../../../styles';
 
 const TechsStyled = styled(Block)`
-  height: 7em;
+  height: 8em;
   overflow-y: scroll;
   scrollbar-width: none;
 

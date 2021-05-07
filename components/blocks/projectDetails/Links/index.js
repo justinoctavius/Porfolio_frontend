@@ -8,7 +8,7 @@ const Links = ({ links }) => {
   return (
     <LinksStyled bg="secondary">
       <Block p1>
-        <H2 center primary>
+        <H2 size2 center primary>
           Links
         </H2>
       </Block>
@@ -16,7 +16,7 @@ const Links = ({ links }) => {
         {links &&
           links.map((link) => (
             <li key={link.link_id}>
-              <Link primary style={{ fontSize: '1.2em' }} href={link.url}>
+              <Link style={{ fontSize: '1.2em' }} href={link.url}>
                 {link.name} <FontAwesomeIcon icon={faLink} />
               </Link>
             </li>

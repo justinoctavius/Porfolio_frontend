@@ -10,21 +10,23 @@ const useProjectApi = () => {
   const api = {
     getAll: async () => await projectAction.getAll()(dispatch),
     get: async (project_id) => await projectAction.get(project_id)(dispatch),
-    add: async (user_id, name, date, images, technologies) =>
+    add: async (user_id, name, date, description, images, technologies) =>
       await projectAction.add(
         user_id,
         name,
         date,
+        description,
         images,
         technologies
       )(dispatch),
     delete: async (project_id) =>
       await projectAction.delete(project_id)(dispatch),
-    update: async (project_id, name, date, images, technologies) =>
+    update: async (project_id, name, date, description, images, technologies) =>
       await projectAction.update(
         project_id,
         name,
         date,
+        description,
         images,
         technologies
       )(dispatch),

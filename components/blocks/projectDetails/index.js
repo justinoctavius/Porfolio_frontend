@@ -9,23 +9,22 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import Links from './Links';
 import Techs from './Techs';
 import { Title } from '../../common';
+import Images from './Images';
 
 const ProjectDetails = ({ project }) => {
   return (
     <ProjectDetailsStyled>
-      <Block>
-        <img src={`${env.IMAGES_HOST}/${project?.images[0]?.url}`} />
-      </Block>
-      <Block>
-        <Block>
+      <Images images={project?.images} className={'project__images'} />
+      <Block className={'project__detailsContainer'}>
+        <Block className={'project__titleBox'}>
           <Title m0 p1 center>
             {project?.name}
           </Title>
         </Block>
-        <Block>
+        <Block className={'project__descriptionBox'}>
           <P center>{project?.description}</P>
         </Block>
-        <Block grid cols="1fr 1fr">
+        <Block grid cols="1fr 1fr" className={'project__info'}>
           <Links links={project?.links} />
           <Techs techs={project?.technologies} />
         </Block>

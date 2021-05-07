@@ -8,26 +8,17 @@ const ProjectDetailsStyled = styled.div`
   color: ${themes.colors.secondary};
   border: 1px solid ${themes.colors.third + '99'};
 
-  & > div:nth-child(1) {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    background: ${themes.colors.primary};
-    img {
-      width: auto;
-      height: 30vh;
-    }
-  }
-
-  & > div:nth-child(2) {
+  .project__detailsContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     z-index: 9;
 
-    div:nth-child(2) {
+    .project__descriptionBox {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      padding: 1em;
       overflow-y: scroll;
     }
   }
@@ -35,7 +26,7 @@ const ProjectDetailsStyled = styled.div`
   @media (min-width: ${themes.screen.s2}) {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    & > div:nth-child(1) {
+    .project__images {
       position: relative;
       background-color: #000;
       img {
@@ -43,7 +34,7 @@ const ProjectDetailsStyled = styled.div`
       }
     }
 
-    & > div:nth-child(2) {
+    .project__detailsContainer {
       width: 100%;
       height: 100%;
     }

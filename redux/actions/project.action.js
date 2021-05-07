@@ -33,11 +33,18 @@ action.get = (project_id) => async (dispatch) => {
   );
 };
 
-action.add = (user_id, name, date, images, technologies) => async (
+action.add = (user_id, name, date, description, images, technologies) => async (
   dispatch
 ) => {
   const query = async () =>
-    await projectApi.add(user_id, name, date, images, technologies);
+    await projectApi.add(
+      user_id,
+      name,
+      date,
+      description,
+      images,
+      technologies
+    );
   await dispatchWriter(
     query,
     dispatch,
@@ -58,11 +65,23 @@ action.delete = (id) => async (dispatch) => {
   );
 };
 
-action.update = (project_id, name, date, images, technologies) => async (
-  dispatch
-) => {
+action.update = (
+  project_id,
+  name,
+  date,
+  description,
+  images,
+  technologies
+) => async (dispatch) => {
   const query = async () =>
-    await projectApi.update(project_id, name, date, images, technologies);
+    await projectApi.update(
+      project_id,
+      name,
+      date,
+      description,
+      images,
+      technologies
+    );
   await dispatchWriter(
     query,
     dispatch,

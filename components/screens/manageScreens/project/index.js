@@ -29,7 +29,7 @@ const ManageProjectScreen = ({ data, mode }) => {
 
   const addAction = () => {
     if (verifyFields()) {
-      api.add(payload?.user_id, name, date, images, technologies);
+      api.add(payload?.user_id, name, date, description, images, technologies);
     }
   };
 
@@ -47,7 +47,14 @@ const ManageProjectScreen = ({ data, mode }) => {
 
   const updateAction = () => {
     if (verifyFields()) {
-      api.update(data?.project_id, name, date, images, technologies);
+      api.update(
+        data?.project_id,
+        name,
+        date,
+        description,
+        images,
+        technologies
+      );
     }
   };
 

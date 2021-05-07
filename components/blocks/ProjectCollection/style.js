@@ -7,7 +7,7 @@ const ProjectCollectionStyled = styled(Block)`
   & > div {
     margin: 0;
     transition: 0.3s;
-    div {
+    & > div {
       width: 15em;
       height: 15em;
     }
@@ -25,6 +25,13 @@ const ProjectCollectionStyled = styled(Block)`
     & > div {
       display: grid;
       margin: ${themes.margin.m1};
+      & > div {
+        width: auto;
+        height: auto;
+      }
+      h2 {
+        padding: ${themes.padding.p1};
+      }
       & > div:nth-child(2) {
         display: block;
       }

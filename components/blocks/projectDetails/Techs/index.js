@@ -6,15 +6,15 @@ const Techs = ({ techs }) => {
   return (
     <TechsStyled bg="secondary">
       <Block p1>
-        <H2 center primary>
+        <H2 size2 center primary>
           Technologies
         </H2>
       </Block>
       <ul>
         {techs &&
           techs.map((tech) => (
-            <li>
-              <Strong style={{ fontSize: '1.2em' }}>{tech.name}</Strong>
+            <li key={tech.tech_id}>
+              <Strong>{tech.name}</Strong>
             </li>
           ))}
       </ul>

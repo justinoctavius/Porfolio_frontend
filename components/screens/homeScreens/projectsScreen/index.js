@@ -11,6 +11,10 @@ const ProjectsScreen = ({ projects, msg, status }) => {
   if (status != 200) {
     return ShowMsg.error(msg);
   }
+
+  if (projects.length === 0) {
+    return ShowMsg.error("There aren't projects");
+  }
   return (
     <ProjectScreenStyled>
       <Block>
