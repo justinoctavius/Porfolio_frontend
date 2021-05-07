@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import { themes } from '../../../../constants';
+import { Block } from '../../../../styles';
 
-const ProjectScreenStyled = styled.div`
+const ProjectScreenStyled = styled(Block)`
   display: grid;
-  grid-template-rows: 10em min-content;
+  grid-template-rows: 6em min-content;
   height: 100%;
 
   @media (min-width: ${themes.screen.s2}) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 11fr;
-    max-height: 100vmin;
+    height: 100%;
 
     & > div:nth-child(1) {
       grid-column: 2;

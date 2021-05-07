@@ -14,13 +14,29 @@ api.signIn = async (email, password) => {
     sessionStorage.setItem(SESSION, payload?.token);
     return { msg, payload: payload?.user, status };
   } catch (error) {
-    return { msg: 'Unable to signin', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Unable to sign-in',
+      payload: null,
+      status: 500,
+    };
   }
 };
 
 api.getByToken = async () => {
   try {
-  } catch (error) {}
+    const token = sessionStorage.getItem(SESSION);
+    const data = await axios.get(`${env.BACKEND_API}/user`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    console.log(data.data)
+    return data.data;
+  } catch (error) {
+    return {
+      msg: error?.response?.data?.msg || 'Unable to sign-in',
+      payload: null,
+      status: 500,
+    };
+  }
 };
 
 export default api;

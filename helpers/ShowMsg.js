@@ -1,17 +1,13 @@
-import { Block, P, Strong } from '../styles';
+import { MsgPopup } from '../components/common';
 
 const msg = {};
 
 msg.error = (msg) => {
-  return (
-    <Block bg={'danger'} absolute height={'10em'}>
-      <P center>{msg}</P>
-    </Block>
-  );
+  return <MsgPopup msg={msg} bg={'danger'} center />;
 };
 
 msg.success = (msg) => {
-  return <P third>{msg}</P>;
+  return <MsgPopup msg={msg} bg={'success'} center />;
 };
 
 export default msg;

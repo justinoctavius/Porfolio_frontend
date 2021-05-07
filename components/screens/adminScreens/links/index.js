@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DataGridCollection } from '../../../../helpers';
+import { DataGridCollection, ShowMsg } from '../../../../helpers';
 import { useLinkApi } from '../../../hooks';
 import AdminLinksPage from './Page';
 
@@ -28,6 +28,10 @@ const AdminLinksScreen = () => {
   useEffect(() => {
     getCollection();
   }, [loading]);
+
+  if (error) {
+    return ShowMsg.error(error);
+  }
 
   return (
     <AdminLinksPage

@@ -20,7 +20,6 @@ action.getByToken = () => async (dispatch) => {
 
 action.singIn = (email, password) => async (dispatch) => {
   const query = async () => await userApi.signIn(email, password);
-  console.log('hola putos 3');
   await dispatchReader(
     query,
     dispatch,

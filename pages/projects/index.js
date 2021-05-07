@@ -6,7 +6,11 @@ import { ProjectsScreen } from '../../components/screens';
 const Projects = ({ data }) => {
   return (
     <HomeLayout>
-      <ProjectsScreen projects={data.payload} msg={data.msg} />
+      <ProjectsScreen
+        projects={data.payload}
+        msg={data.msg}
+        status={data.status}
+      />
     </HomeLayout>
   );
 };

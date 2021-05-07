@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCertificateApi } from '../../../hooks';
 import { ManageLayout } from '../../../layouts';
 import ManageCertificatePage from './page';
@@ -13,6 +13,7 @@ const ManageCertificateScreen = ({ data, mode }) => {
   const addAction = () => {
     if (verifyFields()) {
       api.add(name, imageId, studyId);
+      setStudyId('');
     }
   };
 
@@ -24,7 +25,9 @@ const ManageCertificateScreen = ({ data, mode }) => {
 
   const verifyFields = () => {
     setErrorMsg('');
-    if (name && studyId && imageId) return true;
+    if ((name && imageId && studyId) || (name && imageId && mode == 'update')) {
+      return true;
+    }
     setErrorMsg('Please fill all the fields');
     return false;
   };
@@ -55,6 +58,7 @@ const ManageCertificateScreen = ({ data, mode }) => {
         setImageId={setImageId}
         error={getErrorMsg()}
         success={getSuccessMsg()}
+        mode={mode}
       />
     </ManageLayout>
   );

@@ -8,10 +8,12 @@ import Title from './Title';
 import SelectInput from './selectInput';
 import MultiSelects from './MultiSelects';
 import SelectFileInput from './SelectFileInput';
+import MsgPopup from './MsgPopup';
 
 export {
   Button,
   ErrorMsg,
+  MsgPopup,
   Form,
   Input,
   Link,

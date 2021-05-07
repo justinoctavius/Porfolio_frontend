@@ -4,6 +4,7 @@ import {
   ProjectsScreen,
   WorksScreen,
   StudiesScreen,
+  ContactScreen,
 } from './homeScreens';
 import {
   AdminScreen,
@@ -34,6 +35,7 @@ export {
   WorksScreen,
   StudiesScreen,
   AdminScreen,
+  ContactScreen,
 };
 
 //Admin screens

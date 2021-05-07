@@ -15,11 +15,21 @@ const ManageProjectScreen = ({ data, mode }) => {
   const { writeState, api } = useProjectApi();
   const {
     readerState: { payload },
+    api: userApi,
   } = useUserApi();
+
+  useEffect(() => {
+    getImagesIds();
+    getTechsIds();
+  }, []);
+
+  useEffect(() => {
+    userApi.getByToken();
+  }, []);
 
   const addAction = () => {
     if (verifyFields()) {
-      api.add(payload.user_id, name, date, images, technologies);
+      api.add(payload?.user_id, name, date, images, technologies);
     }
   };
 
@@ -34,11 +44,6 @@ const ManageProjectScreen = ({ data, mode }) => {
       (await data?.technologies?.map((tech) => tech.tech_id)) || [];
     setTechnologies(techsIds);
   };
-
-  useEffect(() => {
-    getImagesIds();
-    getTechsIds();
-  }, []);
 
   const updateAction = () => {
     if (verifyFields()) {

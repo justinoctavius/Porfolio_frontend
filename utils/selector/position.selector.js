@@ -1,5 +1,10 @@
-const position = ({ sticky, fixed, absolute }) => {
-  return (sticky && 'sticky') || (fixed && 'fixed') || (absolute && 'absolute');
+const position = ({ sticky, fixed, absolute, relative }) => {
+  return (
+    (sticky && 'sticky') ||
+    (fixed && 'fixed') ||
+    (absolute && 'absolute') ||
+    (relative && 'relative')
+  );
 };
 
 const top = ({ top }) => {

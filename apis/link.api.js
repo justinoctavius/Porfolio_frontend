@@ -9,7 +9,11 @@ api.get = async (id) => {
     const data = await axios.get(`${env.BACKEND_API}/link/${id}`);
     return data.data;
   } catch (error) {
-    return { msg: 'Ups unable to get the link', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to get the link',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.getAll = async () => {
@@ -17,7 +21,11 @@ api.getAll = async () => {
     const data = await axios.get(`${env.BACKEND_API}/link`);
     return data.data;
   } catch (error) {
-    return { msg: 'Ups unable to get the link', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to get the link',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.add = async (name, url, project_id) => {
@@ -34,7 +42,7 @@ api.add = async (name, url, project_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to add the link',
+      msg: error?.response?.data?.msg || 'Ups unable to add the link',
       payload: null,
       status: 500,
     };
@@ -50,7 +58,7 @@ api.delete = async (link_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to delete the link',
+      msg: error?.response?.data?.msg || 'Ups unable to delete the link',
       payload: null,
       status: 500,
     };
@@ -71,7 +79,7 @@ api.update = async (name, url, link_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to update the link',
+      msg: error?.response?.data?.msg || 'Ups unable to update the link',
       payload: null,
       status: 500,
     };

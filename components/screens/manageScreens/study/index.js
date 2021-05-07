@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useStudyApi, useUserApi } from '../../../hooks';
 import { ManageLayout } from '../../../layouts';
 import ManageStudyPage from './page';
@@ -13,7 +13,12 @@ const ManageStudyScreen = ({ data, mode }) => {
   const { writeState, api } = useStudyApi();
   const {
     readerState: { payload },
+    api: userApi,
   } = useUserApi();
+
+  useEffect(() => {
+    userApi.getByToken();
+  }, []);
 
   const addAction = () => {
     if (verifyFields()) {

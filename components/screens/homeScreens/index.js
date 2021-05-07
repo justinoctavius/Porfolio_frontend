@@ -3,6 +3,7 @@ import ProjectsScreen from './projectsScreen';
 import StudiesScreen from './studiesScreen';
 import WelcomeScreen from './welcomeScreen';
 import WorksScreen from './worksScreen';
+import ContactScreen from './contactScreen';
 
 export {
   HomeScreen,
@@ -10,4 +11,5 @@ export {
   StudiesScreen,
   WelcomeScreen,
   WorksScreen,
+  ContactScreen,
 };

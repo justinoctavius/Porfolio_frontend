@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { themes } from '../../../constants';
 import { Block, Strong } from '../../../styles';
 import { Button, Title } from '../../common';
@@ -7,6 +8,7 @@ const { colors } = themes;
 
 const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
   const modeUpper = mode.replace(mode[0], mode[0].toUpperCase());
+  const router = useRouter();
   return (
     <ManageLayoutStyled
       height="100vh"
@@ -49,7 +51,7 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
             color="danger"
             radius1
             minW="8em"
-            onClick={() => window.history.back()}
+            onClick={() => router.back()}
           >
             <Strong>Close</Strong>
           </Button>

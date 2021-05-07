@@ -19,7 +19,7 @@ const LinkCommon = (props) => {
       <A
         {...props}
         onMouseOver={() => _hoverHandler()}
-        customColor={hover && themes.colors.third + 'dd'}
+        customColor={hover && !props.notHover && themes.colors.third + 'dd'}
         onMouseLeave={_leaveHandler}
       >
         {props.children}

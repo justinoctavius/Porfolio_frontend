@@ -10,7 +10,7 @@ api.get = async (id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to get the projects',
+      msg: error?.response?.data?.msg || 'Ups unable to get the projects',
       payload: null,
       status: 500,
     };
@@ -23,7 +23,7 @@ api.getAll = async () => {
   } catch (error) {
     console.log(error);
     return {
-      msg: 'Ups unable to get the projects',
+      msg: error?.response?.data?.msg || 'Ups unable to get the projects',
       payload: null,
       status: 500,
     };
@@ -46,7 +46,7 @@ api.add = async (user_id, name, date, images, technologies) => {
   } catch (error) {
     console.log(error);
     return {
-      msg: 'Ups unable to add the projects',
+      msg: error?.response?.data?.msg || 'Ups unable to add the projects',
       payload: null,
       status: 500,
     };
@@ -63,7 +63,7 @@ api.delete = async (project_id) => {
   } catch (error) {
     console.log(error);
     return {
-      msg: 'Ups unable to delete the projects',
+      msg: error?.response?.data?.msg || 'Ups unable to delete the projects',
       payload: null,
       status: 500,
     };
@@ -86,7 +86,7 @@ api.update = async (project_id, name, date, images, technologies) => {
   } catch (error) {
     console.log(error);
     return {
-      msg: 'Ups unable to update the projects',
+      msg: error?.response?.data?.msg || 'Ups unable to update the projects',
       payload: null,
       status: 500,
     };

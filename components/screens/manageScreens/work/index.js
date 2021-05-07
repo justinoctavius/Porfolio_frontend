@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useUserApi, useWorkApi } from '../../../hooks';
 import { ManageLayout } from '../../../layouts';
 import ManageWorkPage from './page';
@@ -11,7 +11,12 @@ const ManageWorkScreen = ({ data, mode }) => {
   const { writeState, api } = useWorkApi();
   const {
     readerState: { payload },
+    api: userApi,
   } = useUserApi();
+
+  useEffect(() => {
+    userApi.getByToken();
+  }, []);
 
   const addAction = async () => {
     if (verifyFields()) {

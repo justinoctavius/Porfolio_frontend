@@ -2,41 +2,44 @@ import styled from 'styled-components';
 import { themes } from '../../../constants';
 
 const ProjectDetailsStyled = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  height: 50vmax;
+  background-color: ${themes.colors.third + '99'};
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: ${themes.colors.secondary};
+  border: 1px solid ${themes.colors.third + '99'};
 
   & > div:nth-child(1) {
-    position: absolute;
     height: 100%;
-    left: 0px;
-    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: ${themes.colors.primary};
     img {
-      width: 100%;
-      height: 100%;
+      width: auto;
+      height: 30vh;
     }
   }
 
   & > div:nth-child(2) {
-    width: 50%;
-    background-color: ${themes.colors.secondary + 'dd'};
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: ${themes.padding.p1};
     z-index: 9;
+
+    div:nth-child(2) {
+      overflow-y: scroll;
+    }
   }
 
   @media (min-width: ${themes.screen.s2}) {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    min-height: 87vh;
     & > div:nth-child(1) {
       position: relative;
+      background-color: #000;
       img {
-        width: 100%;
-        height: 100%;
+        height: 30em;
       }
     }
 

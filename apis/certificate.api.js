@@ -10,7 +10,7 @@ api.get = async (id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to get the certificate',
+      msg: error?.response?.data?.msg || 'Ups unable to get the certificate',
       payload: null,
       status: 500,
     };
@@ -22,7 +22,7 @@ api.getAll = async () => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to get the certificate',
+      msg: error?.response?.data?.msg || 'Ups unable to get the certificate',
       payload: null,
       status: 500,
     };
@@ -43,7 +43,7 @@ api.add = async (name, image_id, study_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to add the certificate',
+      msg: error?.response?.data?.msg || 'Ups Unable to add the certificate',
       payload: null,
       status: 500,
     };
@@ -63,7 +63,7 @@ api.delete = async (certificate_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to delete the certificate',
+      msg: error?.response?.data?.msg || 'Ups unable to delete the certificate',
       payload: null,
       status: 500,
     };
@@ -84,7 +84,7 @@ api.update = async (name, image_id, certificate_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to update the certificate',
+      msg: error?.response?.data?.msg || 'Ups unable to update the certificate',
       payload: null,
       status: 500,
     };

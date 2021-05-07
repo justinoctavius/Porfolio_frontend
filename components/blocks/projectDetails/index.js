@@ -6,6 +6,9 @@ import env from '../../../config/env';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import Links from './Links';
+import Techs from './Techs';
+import { Title } from '../../common';
 
 const ProjectDetails = ({ project }) => {
   return (
@@ -15,31 +18,16 @@ const ProjectDetails = ({ project }) => {
       </Block>
       <Block>
         <Block>
-          <H2 center primary>
+          <Title m0 p1 center>
             {project?.name}
-          </H2>
-          <P center primary>
-            {project?.description}
-          </P>
+          </Title>
         </Block>
         <Block>
-          <Block p1>
-            <H2 p1 size2 primary center>
-              Links
-            </H2>
-            {project?.links?.map((link) => (
-              <A href={link.url} key={link.link_id} primary size={'1.2em'} bold>
-                <FontAwesomeIcon icon={faLink} /> {link.name}
-              </A>
-            ))}
-          </Block>
-          <Block display="flex" justify="center">
-            <Link href={`/projects/${project?.project_id}`}>
-              <A size2 bold third>
-                Ver mas
-              </A>
-            </Link>
-          </Block>
+          <P center>{project?.description}</P>
+        </Block>
+        <Block grid cols="1fr 1fr">
+          <Links links={project?.links} />
+          <Techs techs={project?.technologies} />
         </Block>
       </Block>
     </ProjectDetailsStyled>

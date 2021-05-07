@@ -1,6 +1,13 @@
 import SelectInputPage from './page';
 
-const SelectInput = ({ options, label, setSelected, selected, element_id }) => {
+const SelectInput = ({
+  options,
+  label,
+  setSelected,
+  selected,
+  element_id,
+  disabled,
+}) => {
   return (
     <SelectInputPage
       setSelected={setSelected}
@@ -8,6 +15,7 @@ const SelectInput = ({ options, label, setSelected, selected, element_id }) => {
       options={options}
       element_id={element_id}
       label={label}
+      disabled={disabled}
     />
   );
 };

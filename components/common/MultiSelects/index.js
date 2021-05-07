@@ -1,4 +1,3 @@
-import SelectStyled from '../selectInput/style';
 import MultiSelectsPage from './page';
 
 const MultiSelects = ({

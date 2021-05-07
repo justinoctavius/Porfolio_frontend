@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DataGridCollection } from '../../../../helpers';
+import { DataGridCollection, ShowMsg } from '../../../../helpers';
 import { useTechApi } from '../../../hooks';
 import AdminTechsPage from './Page';
 
@@ -28,6 +28,10 @@ const AdminTechsScreen = () => {
   useEffect(() => {
     getCollection();
   }, [loading]);
+
+  if (error) {
+    return ShowMsg.error(error);
+  }
 
   return (
     <AdminTechsPage

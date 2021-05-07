@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DataGridCollection } from '../../../../helpers';
+import { DataGridCollection, ShowMsg } from '../../../../helpers';
 import { useImageApi } from '../../../hooks';
 import AdminImagesPage from './Page';
 
@@ -28,6 +28,10 @@ const AdminImagesScreen = () => {
   useEffect(() => {
     getCollection();
   }, [loading]);
+
+  if (error) {
+    return ShowMsg.error(error);
+  }
 
   return (
     <AdminImagesPage

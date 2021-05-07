@@ -11,6 +11,7 @@ const ManageCertificatePage = ({
   imageId,
   error,
   success,
+  mode,
 }) => {
   return (
     <Block>
@@ -23,7 +24,12 @@ const ManageCertificatePage = ({
           minLength="3"
         />
         <SelectImageInput selected={imageId} setSelected={setImageId} />
-        <SelectStudyInput selected={studyId} setSelected={setStudyId} />
+        <SelectStudyInput
+          selected={studyId}
+          setSelected={setStudyId}
+          excludeStudyWithCertificate
+          disabled={mode == 'update'}
+        />
       </Form>
     </Block>
   );

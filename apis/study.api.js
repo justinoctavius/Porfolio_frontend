@@ -9,7 +9,11 @@ api.get = async (id) => {
     const data = await axios.get(`${env.BACKEND_API}/study/${id}`);
     return data.data;
   } catch (error) {
-    return { msg: 'Ups unable to get the study', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to get the study',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.getAll = async () => {
@@ -17,7 +21,11 @@ api.getAll = async () => {
     const data = await axios.get(`${env.BACKEND_API}/study`);
     return data.data;
   } catch (error) {
-    return { msg: 'Ups unable to get the study', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to get the study',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.add = async (user_id, name, date, place, description) => {
@@ -35,7 +43,11 @@ api.add = async (user_id, name, date, place, description) => {
     );
     return data.data;
   } catch (error) {
-    return { msg: 'Ups unable to add the study', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to add the study',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.delete = async (study_id) => {
@@ -47,7 +59,7 @@ api.delete = async (study_id) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to delete the study',
+      msg: error?.response?.data?.msg || 'Ups unable to delete the study',
       payload: null,
       status: 500,
     };
@@ -69,7 +81,7 @@ api.update = async (study_id, name, date, place, description) => {
     return data.data;
   } catch (error) {
     return {
-      msg: 'Ups unable to update the study',
+      msg: error?.response?.data?.msg || 'Ups unable to update the study',
       payload: null,
       status: 500,
     };

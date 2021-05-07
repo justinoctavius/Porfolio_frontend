@@ -11,7 +11,7 @@ const CardPage = (props) => {
       border
       bColor="third"
       minH="15em"
-      cols={image ? '1fr 2fr' : '1fr'}
+      cols={image ? '2fr 3fr' : '1fr'}
       image={image}
       {...props}
     >
@@ -25,7 +25,7 @@ const CardPage = (props) => {
           <H2>{title}</H2>
         </Block>
         <Block>
-          <P>{description}</P>
+          <P center>{description}</P>
         </Block>
         {date && (
           <Block>

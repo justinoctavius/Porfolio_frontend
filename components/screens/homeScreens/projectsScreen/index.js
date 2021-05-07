@@ -3,16 +3,19 @@ import { ShowMsg } from '../../../../helpers';
 import ProjectScreenStyled from './style';
 import { ProjectCollection, ProjectDetails } from '../../../blocks';
 import { Title } from '../../../common';
+import { Block } from '../../../../styles';
 
-const ProjectsScreen = ({ projects, msg }) => {
+const ProjectsScreen = ({ projects, msg, status }) => {
   const [projectSelected, setProjectSelected] = useState({ id: '', index: 0 });
 
-  if (msg != 'success') {
+  if (status != 200) {
     return ShowMsg.error(msg);
   }
   return (
     <ProjectScreenStyled>
-      <Title center>Projects</Title>
+      <Block>
+        <Title center>Projects</Title>
+      </Block>
       <ProjectDetails project={projects[projectSelected.index]} />
       <ProjectCollection
         projects={projects}

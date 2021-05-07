@@ -3,6 +3,7 @@ import { themes } from '../../../constants';
 import { Block } from '../../../styles';
 
 const ProjectCollectionStyled = styled(Block)`
+  padding: 0px;
   & > div {
     margin: 0;
     transition: 0.3s;
@@ -17,9 +18,10 @@ const ProjectCollectionStyled = styled(Block)`
   @media (min-width: ${themes.screen.s2}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content;
+    grid-template-rows: max-content;
     overflow-x: visible;
     overflow-y: scroll;
+    padding: 2em;
     & > div {
       display: grid;
       margin: ${themes.margin.m1};

@@ -6,14 +6,17 @@ import { StudiesScreen } from '../components/screens';
 const Studies = ({ data }) => {
   return (
     <HomeLayout>
-      <StudiesScreen studies={data.payload} msg={data.msg} />
+      <StudiesScreen
+        studies={data.payload}
+        msg={data.msg}
+        status={data.status}
+      />
     </HomeLayout>
   );
 };
 
 export const getServerSideProps = async () => {
   const data = await studyApi.getAll();
-
   return {
     props: { data },
   };

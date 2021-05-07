@@ -1,7 +1,7 @@
 export const colors = {
-  primary: '#222222',
-  secondary: '#E0E0E0',
-  third: '#219653',
+  primary: '#121212',
+  secondary: '#d0d0d0',
+  third: '#516691',
   black: '#000000',
   danger: '#a13628',
 };

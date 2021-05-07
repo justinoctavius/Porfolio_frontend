@@ -9,7 +9,11 @@ api.get = async (id) => {
     const data = await axios.get(`${env.BACKEND_API}/work/${id}`);
     return data.data;
   } catch (error) {
-    return { msg: 'Ups unable to get the work', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to get the work',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.getAll = async () => {
@@ -18,7 +22,11 @@ api.getAll = async () => {
     return data.data;
   } catch (error) {
     console.log(error);
-    return { msg: 'Ups unable to get the work', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to get the work',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.add = async (user_id, name, date, description) => {
@@ -36,7 +44,11 @@ api.add = async (user_id, name, date, description) => {
     return data.data;
   } catch (error) {
     console.log(error);
-    return { msg: 'Ups unable to add the work', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to add the work',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.delete = async (work_id) => {
@@ -48,7 +60,11 @@ api.delete = async (work_id) => {
     return data.data;
   } catch (error) {
     console.log(error);
-    return { msg: 'Ups unable to delete the work', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to delete the work',
+      payload: null,
+      status: 500,
+    };
   }
 };
 api.update = async (work_id, name, date, description) => {
@@ -66,7 +82,11 @@ api.update = async (work_id, name, date, description) => {
     return data.data;
   } catch (error) {
     console.log(error);
-    return { msg: 'Ups unable to update the work', payload: null, status: 500 };
+    return {
+      msg: error?.response?.data?.msg || 'Ups unable to update the work',
+      payload: null,
+      status: 500,
+    };
   }
 };
 

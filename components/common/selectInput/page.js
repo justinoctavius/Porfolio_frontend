@@ -8,18 +8,23 @@ const SelectInputPage = ({
   selected,
   element_id,
   element_name,
+  disabled,
 }) => {
   const [focus, setFocus] = useState(false);
   return (
-    <SelectStyled focus={focus}>
+    <SelectStyled focus={focus} disabled={disabled}>
       <label>{label}</label>
       <select
         onBlur={() => setFocus(false)}
         onFocus={() => setFocus(true)}
         defaultValue={selected}
         onChange={(e) => setSelected(e.target.value)}
+        disabled={disabled}
       >
-        <option value="">Select a {label}</option>
+        <option value="">
+          {options?.length > 0 ? 'Select a ' : "There isn't "}
+          {label}
+        </option>
         {options &&
           options.length > 0 &&
           options.map((opt) => {

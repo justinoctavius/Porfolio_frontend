@@ -6,7 +6,7 @@ import { WorksScreen } from '../../components/screens';
 const Jobs = ({ data }) => {
   return (
     <HomeLayout>
-      <WorksScreen works={data.payload} msg={data.msg} />
+      <WorksScreen works={data.payload} msg={data.msg} status={data.status} />
     </HomeLayout>
   );
 };
