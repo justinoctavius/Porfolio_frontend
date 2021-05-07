@@ -1,6 +1,10 @@
 const env = {
-  BACKEND_API: process.env.BACKEND_API || 'localhost/api',
-  IMAGES_HOST: process.env.IMAGES_HOST || 'localhost',
+  BACKEND_API:
+    process.env.BACKEND_API ||
+    'http://ec2-34-201-86-65.compute-1.amazonaws.com/api',
+  IMAGES_HOST:
+    process.env.IMAGES_HOST ||
+    'http://ec2-34-201-86-65.compute-1.amazonaws.com/',
 };
 
 export default env;
