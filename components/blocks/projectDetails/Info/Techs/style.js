@@ -1,9 +1,13 @@
 import styled from 'styled-components';
-import { colors, margin, padding, radius } from '../../../../constants/themes';
-import { Block } from '../../../../styles';
+import {
+  colors,
+  margin,
+  padding,
+  radius,
+} from '../../../../../constants/themes';
+import { Block } from '../../../../../styles';
 
 const TechsStyled = styled(Block)`
-  height: 8em;
   overflow-y: scroll;
   scrollbar-width: none;
 

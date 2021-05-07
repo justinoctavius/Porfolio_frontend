@@ -22,7 +22,7 @@ const InputStyled = styled.input`
   border-left: 0;
   transition: 0.3s;
   &:focus {
-    border-color: ${themes.colors.third};
+    border-color: ${themes.colors.hover};
   }
 `;
 
@@ -40,7 +40,7 @@ const InputContainerStyled = styled(Block)`
     left: ${({ focus, value, selected }) =>
       focus || value || selected ? 0 : '8%'};
     color: ${({ focus }) =>
-      !focus ? themes.colors.secondary : themes.colors.third};
+      !focus ? themes.colors.secondary : themes.colors.hover};
   }
 
   input {

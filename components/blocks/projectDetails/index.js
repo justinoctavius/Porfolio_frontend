@@ -1,17 +1,13 @@
 import ProjectDetailsStyled from './style';
-import { A, Block, H2, P } from '../../../styles';
+import { Block, P } from '../../../styles';
 
-import Link from 'next/link';
-import env from '../../../config/env';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import Links from './Links';
-import Techs from './Techs';
 import { Title } from '../../common';
 import Images from './Images';
+import { useState } from 'react';
+import Info from './Info';
 
 const ProjectDetails = ({ project }) => {
+  const [showInfo, setShowInfo] = useState();
   return (
     <ProjectDetailsStyled>
       <Images images={project?.images} className={'project__images'} />
@@ -24,10 +20,7 @@ const ProjectDetails = ({ project }) => {
         <Block className={'project__descriptionBox'}>
           <P center>{project?.description}</P>
         </Block>
-        <Block grid cols="1fr 1fr" className={'project__info'}>
-          <Links links={project?.links} />
-          <Techs techs={project?.technologies} />
-        </Block>
+        <Info links={project?.links} technologies={project?.technologies} />
       </Block>
     </ProjectDetailsStyled>
   );

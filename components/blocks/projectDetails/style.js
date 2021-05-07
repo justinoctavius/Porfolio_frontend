@@ -18,6 +18,7 @@ const ProjectDetailsStyled = styled.div`
       height: 100%;
       display: flex;
       align-items: flex-start;
+      justify-content: center;
       padding: 1em;
       overflow-y: scroll;
     }

@@ -16,7 +16,7 @@ const ImagesPage = ({ images, selected, setNext, setBefore }) => {
       <Block className={'images__container'}>
         {images &&
           images?.map((image) => (
-            <Block absolute>
+            <Block absolute key={image.image_id}>
               <img src={`${env.IMAGES_HOST}/${image?.url}`} />
             </Block>
           ))}

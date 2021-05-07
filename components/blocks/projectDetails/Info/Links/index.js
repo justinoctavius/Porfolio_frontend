@@ -1,7 +1,7 @@
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Block, H1, H2 } from '../../../../styles';
-import { Link, Title } from '../../../common';
+import { Block, H1, H2 } from '../../../../../styles';
+import { Link, Title } from '../../../../common';
 import LinksStyled from './style';
 
 const Links = ({ links }) => {

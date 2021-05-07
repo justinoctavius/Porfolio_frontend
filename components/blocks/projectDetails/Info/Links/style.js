@@ -1,9 +1,13 @@
 import styled from 'styled-components';
-import { colors, margin, padding, radius } from '../../../../constants/themes';
-import { Block, rebooting, scale, scaleIn } from '../../../../styles';
+import {
+  colors,
+  margin,
+  padding,
+  radius,
+} from '../../../../../constants/themes';
+import { Block, rebooting, scale, scaleIn } from '../../../../../styles';
 
 const LinksStyled = styled(Block)`
-  height: 8em;
   overflow-y: scroll;
   scrollbar-width: none;
 

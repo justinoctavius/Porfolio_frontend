@@ -1,3 +1,5 @@
+import { faDoorOpen, faPlus, faSave } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
 import { themes } from '../../../constants';
 import { Block, Strong } from '../../../styles';
@@ -10,13 +12,7 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
   const modeUpper = mode.replace(mode[0], mode[0].toUpperCase());
   const router = useRouter();
   return (
-    <ManageLayoutStyled
-      height="100vh"
-      bg={`linear-gradient(305deg, ${colors.primary} 50%,${colors.secondary})`}
-      center
-      flex
-      middle
-    >
+    <ManageLayoutStyled height="100vh" gradient2 center flex middle>
       <Block
         grid
         bg={colors.primary + '55'}
@@ -25,7 +21,7 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
         maxW="max-content"
         border
         radius2
-        bColor="third"
+        bColor="secondary"
         p1
       >
         <Block>
@@ -44,7 +40,10 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
             minW="8em"
             onClick={mode == 'update' ? updateAction : addAction}
           >
-            <Strong>{mode == 'update' ? 'Save' : 'Add'}</Strong>
+            <Strong>
+              {mode == 'update' ? 'Save' : 'Add'}{' '}
+              <FontAwesomeIcon icon={mode == 'update' ? faSave : faPlus} />
+            </Strong>
           </Button>
           <Button
             m1
@@ -53,7 +52,9 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
             minW="8em"
             onClick={() => router.back()}
           >
-            <Strong>Close</Strong>
+            <Strong>
+              Close <FontAwesomeIcon icon={faDoorOpen} />{' '}
+            </Strong>
           </Button>
         </Block>
       </Block>

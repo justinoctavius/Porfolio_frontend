@@ -16,7 +16,7 @@ const SelectStyled = styled(Block)`
     position: absolute;
     top: ${({ focus }) => (focus ? 0 : '0')};
     left: ${({ focus }) => (focus ? 0 : '45%')};
-    color: ${({ focus }) => focus && colors.third};
+    color: ${({ focus }) => focus && colors.hover};
   }
   & > select {
     width: 10em;
@@ -29,7 +29,7 @@ const SelectStyled = styled(Block)`
   }
   & > select:focus {
     width: 100%;
-    border-color: ${colors.third};
+    border-color: ${colors.hover};
   }
 `;
 

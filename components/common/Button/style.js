@@ -1,24 +1,13 @@
 import styled from 'styled-components';
 import { themes } from '../../../constants';
-import {
-  borders,
-  colors,
-  margins,
-  paddings,
-  sizes,
-} from '../../../styles/styles';
+import { Block } from '../../../styles';
 import { select } from '../../../utils';
 
-const ButtonStyled = styled.div`
+const ButtonStyled = styled(Block)`
   cursor: ${select.cursor};
   display: inline-block;
   text-align: center;
   font-size: ${themes.sizes.p};
-  ${sizes}
-  ${colors}
-  ${paddings}
-  ${margins}
-  ${borders}
   border: 0;
 `;
 

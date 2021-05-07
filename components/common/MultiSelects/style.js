@@ -30,7 +30,7 @@ const MultiSelectsStyled = styled(Block)`
     transition: 0.3s;
   }
   & > div:nth-child(2) > div:hover {
-    color: ${themes.colors.third};
+    color: ${themes.colors.hover};
   }
 `;
 

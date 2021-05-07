@@ -1,5 +1,4 @@
-import { Block, H1, H2, Strong } from '../../../../styles';
-import { Title } from '../../../common';
+import { Block, H2, Strong } from '../../../../../styles';
 import TechsStyled from './style';
 
 const Techs = ({ techs }) => {

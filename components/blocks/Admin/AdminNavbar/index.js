@@ -3,7 +3,7 @@ import {
   faBusinessTime,
   faCertificate,
   faCode,
-  faCogs,
+  faDoorOpen,
   faHouseUser,
   faImage,
   faLink,
@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Block } from '../../../../styles';
 import { Navbar } from '../..';
+import { SESSION } from '../../../../constants';
 
 const AdminNavbar = () => {
   return (
@@ -62,9 +63,13 @@ const items = [
     icon: faImage,
   },
   {
-    name: 'Settings',
-    url: '/admin/settings',
-    icon: faCogs,
+    name: 'Sign out',
+    url: '',
+    onClick: () => {
+      sessionStorage.removeItem(SESSION);
+      window.history.back();
+    },
+    icon: faDoorOpen,
   },
 ];
 

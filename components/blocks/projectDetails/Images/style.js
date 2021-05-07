@@ -34,7 +34,7 @@ const ImagesPage = styled(Block)`
       transition: 0.3s;
       img {
         width: 100%;
-        height: 30vh;
+        height: 40vh;
       }
     }
     div:nth-child(${({ selected }) => selected}) {

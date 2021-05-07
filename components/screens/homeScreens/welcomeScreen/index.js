@@ -5,7 +5,7 @@ import WelcomeScreenStyled from './style';
 
 const WelcomeScreen = () => {
   return (
-    <WelcomeScreenStyled gradient flex center middle height="100%" ref={screen}>
+    <WelcomeScreenStyled gradient flex center middle height="100%">
       <Block>
         <H1 center size={'15vw'}>
           Wel
