@@ -49,6 +49,9 @@ const HomeStyled = styled(Block)`
     & > div:hover {
       transform: scale(1);
     }
+    .home_card {
+      width: 90%;
+    }
   }
 `;
 
