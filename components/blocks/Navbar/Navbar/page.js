@@ -1,6 +1,6 @@
 import { Block } from '../../../../styles';
+import { ToggleShowBtn } from '../../../common';
 import ItemCollection from '../ItemCollection';
-import ToggleShowBtn from '../ToggleShowBtn';
 import NavbarStyled from './style';
 
 const NavbarPage = ({ items, layout, show, setShow }) => {

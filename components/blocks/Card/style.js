@@ -3,10 +3,17 @@ import { themes } from '../../../constants';
 import { Block } from '../../../styles';
 
 const CardStyled = styled(Block)`
-  img {
-    border-radius: ${themes.radius.r1};
-    height: 100%;
-    width: 100%;
+  cursor: pointer;
+  .card_image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    img {
+      border-radius: ${themes.radius.r1};
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .card_body {

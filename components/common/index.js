@@ -9,6 +9,7 @@ import SelectInput from './selectInput';
 import MultiSelects from './MultiSelects';
 import SelectFileInput from './SelectFileInput';
 import MsgPopup from './MsgPopup';
+import ToggleShowBtn from './ToggleShowBtn';
 
 export {
   Button,
@@ -22,4 +23,5 @@ export {
   SelectInput,
   MultiSelects,
   SelectFileInput,
+  ToggleShowBtn,
 };

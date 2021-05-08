@@ -10,13 +10,13 @@ const CardPage = (props) => {
       m1
       border
       bColor="third"
-      minH="15em"
+      height="15em"
       cols={image ? '2fr 3fr' : '1fr'}
       image={image}
       {...props}
     >
       {image && (
-        <Block>
+        <Block height="100%" hidden className="card_image">
           <img src={`${env.IMAGES_HOST}/${image}`} />
         </Block>
       )}

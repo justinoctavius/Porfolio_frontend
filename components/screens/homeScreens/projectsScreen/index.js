@@ -7,6 +7,12 @@ import { Block } from '../../../../styles';
 
 const ProjectsScreen = ({ projects, msg, status }) => {
   const [projectSelected, setProjectSelected] = useState({ id: '', index: 0 });
+  const [showDetails, setShowDetails] = useState(false);
+
+  const setProjectSelectedHandler = ({ index, id }) => {
+    setProjectSelected({ index, id });
+    setShowDetails(true);
+  };
 
   if (status != 200) {
     return ShowMsg.error(msg);
@@ -20,11 +26,15 @@ const ProjectsScreen = ({ projects, msg, status }) => {
       <Block>
         <Title center>Projects</Title>
       </Block>
-      <ProjectDetails project={projects[projectSelected.index]} />
+      <ProjectDetails
+        project={projects[projectSelected.index]}
+        show={showDetails}
+        setShow={setShowDetails}
+      />
       <ProjectCollection
         projects={projects}
         selected={projectSelected}
-        setSelected={setProjectSelected}
+        setSelected={setProjectSelectedHandler}
       />
     </ProjectScreenStyled>
   );

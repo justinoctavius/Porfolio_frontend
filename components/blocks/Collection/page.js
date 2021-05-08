@@ -1,7 +1,7 @@
 import CollectionStyled from './style';
 
-const CollectionPage = ({ children }) => {
-  return <CollectionStyled>{children}</CollectionStyled>;
+const CollectionPage = ({ children, maxCols }) => {
+  return <CollectionStyled maxCols={maxCols}>{children}</CollectionStyled>;
 };
 
 export default CollectionPage;

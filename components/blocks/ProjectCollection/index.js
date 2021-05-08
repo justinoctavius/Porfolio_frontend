@@ -1,23 +1,21 @@
 import Card from '../Card';
-import ProjectCollectionStyled from './style';
+import { Collection } from '..';
 
 const ProjectCollection = ({ projects, selected, setSelected }) => {
   return (
-    <ProjectCollectionStyled flex maxW="100vw" p2>
+    <Collection maxCols="2">
       {projects?.map((project, index) => (
         <Card
           description={project?.description}
           image={project?.images[0]?.url}
           title={project?.name}
           bColor={project?.project_id == selected.id ? 'third' : 'secondary'}
-          block
           pointer
-          height="min-content"
           onClick={() => setSelected({ index, id: project.project_id })}
           key={index}
         />
       ))}
-    </ProjectCollectionStyled>
+    </Collection>
   );
 };
 

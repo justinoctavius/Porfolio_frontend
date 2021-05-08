@@ -9,7 +9,8 @@ const CollectionStyled = styled(Block)`
   }
   @media (min-width: ${themes.screen.s2}) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: ${({ maxCols }) =>
+      maxCols ? `repeat(${maxCols} 1fr)` : '1fr 1fr 1fr'};
   }
 `;
 
