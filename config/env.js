@@ -1,6 +1,6 @@
 const env = {
-  BACKEND_API: 'http://ec2-34-201-86-65.compute-1.amazonaws.com/api',
-  IMAGES_HOST: 'http://ec2-34-201-86-65.compute-1.amazonaws.com/',
+  BACKEND_API: 'https://justinoctaviocolon.tk/api',
+  IMAGES_HOST: 'https://justinoctaviocolon.tk',
 };
 
 export default env;
