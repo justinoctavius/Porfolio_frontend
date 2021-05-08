@@ -6,10 +6,10 @@ import NavbarStyled from './style';
 const NavbarPage = ({ items, layout, show, setShow }) => {
   return (
     <NavbarStyled show={show} layout={layout}>
-      <ToggleShowBtn show={show} setShow={setShow} m1 />
-      <Block bg={'primary'}>
-        <Block>
-          <ToggleShowBtn show={show} setShow={setShow} m1 />
+      <ToggleShowBtn show={false} setShow={setShow} m1 className="showBtn" />
+      <Block bg={'primary'} className="items_box">
+        <Block className="items">
+          <ToggleShowBtn show={true} setShow={setShow} m1 className="showBtn" />
           <ItemCollection show={show} items={items} setShow={setShow} />
         </Block>
       </Block>

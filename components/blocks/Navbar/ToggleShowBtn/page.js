@@ -9,7 +9,7 @@ const ToggleShowBtnPage = (props) => {
     <Block {...props}>
       <Strong
         size4
-        customColor={themes.colors[show ? 'danger' : 'secondary'] + '88'}
+        customColor={themes.colors[show ? 'danger' : 'hover'] + '88'}
         pointer
         onClick={() => {
           setShow(!show);

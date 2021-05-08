@@ -17,8 +17,8 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
         grid
         bg={colors.primary + '55'}
         rows="min-content 1fr min-content"
-        minH="70em"
-        maxW="max-content"
+        height="100%"
+        width="max-content"
         border
         radius2
         bColor="secondary"

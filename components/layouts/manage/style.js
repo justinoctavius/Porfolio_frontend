@@ -4,23 +4,17 @@ import { Block } from '../../../styles';
 
 const ManageLayoutStyled = styled(Block)`
   & > div {
-    max-width: 100%;
+    height: 70em;
     & > div:nth-child(2) {
       scrollbar-width: none;
+      overflow-x: hidden;
     }
   }
   @media (max-width: ${themes.screen.s4}) {
     & > div {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       border-radius: 0;
-      background-color: ${themes.colors.primary + '55'};
-    }
-  }
-  @media (min-width: ${themes.screen.s4}) {
-    & > div {
-      width: 70vw;
-      height: max-content;
     }
   }
 `;

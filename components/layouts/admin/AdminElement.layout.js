@@ -10,7 +10,7 @@ const AdminElementLayout = ({
   title,
 }) => {
   return (
-    <Block>
+    <Block height="100%">
       <AdminHeader
         addUrl={addUrl}
         deleteAction={deleteAction}
@@ -18,7 +18,9 @@ const AdminElementLayout = ({
         title={title}
         updateUrl={updateUrl}
       />
-      {children}
+      <Block maxH="100vh" scroll>
+        {children}
+      </Block>
     </Block>
   );
 };

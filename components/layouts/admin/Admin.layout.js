@@ -24,7 +24,7 @@ const AdminLayout = ({ children }) => {
     >
       <ProviderWrapper>
         <AdminNavbar />
-        <Block minW="100%" maxW="100vmin">
+        <Block minW="100%" scroll maxW="100vmin">
           {children}
         </Block>
       </ProviderWrapper>
