@@ -32,7 +32,7 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
         <Block scroll flex center>
           {children}
         </Block>
-        <Block flex justifyEnd>
+        <Block flex justifyEnd className="manage_btn">
           <Button
             m1
             color="third"

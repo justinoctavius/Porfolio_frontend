@@ -15,6 +15,13 @@ const ManageLayoutStyled = styled(Block)`
       width: 100%;
       height: 100%;
       border-radius: 0;
+
+      .manage_btn {
+        position: absolute;
+        padding: 1em;
+        bottom: 0px;
+        right: 0px;
+      }
     }
   }
 `;
