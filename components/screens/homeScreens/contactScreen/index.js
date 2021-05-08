@@ -32,7 +32,7 @@ const ContactScreen = () => {
               <Link href="https://www.linkedin.com/in/justin-octavio-col%C3%B3n-solano-080a541a3/">
                 <img src="/linkedin_icon.png" />
               </Link>
-              <Strong>Link</Strong>
+              <Strong>Linked-in</Strong>
             </Block>
             <Block className="link" flex fColumn middle>
               <Link href="https://github.com/justinoctavius">
