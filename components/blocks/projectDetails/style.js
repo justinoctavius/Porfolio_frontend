@@ -13,6 +13,7 @@ const ProjectDetailsStyled = styled.div`
     flex-direction: column;
     justify-content: space-between;
     z-index: 9;
+    min-height: 10em;
 
     .project__descriptionBox {
       height: 100%;
@@ -24,17 +25,7 @@ const ProjectDetailsStyled = styled.div`
     }
   }
 
-  @media (min-width: ${themes.screen.s2}) {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    .project__images {
-      position: relative;
-      background-color: #000;
-      img {
-        height: 30em;
-      }
-    }
-
+  @media (min-width: ${themes.screen.s3}) {
     .project__detailsContainer {
       width: 100%;
       height: 100%;

@@ -5,9 +5,10 @@ import { Block } from '../../../../styles';
 const ProjectScreenStyled = styled(Block)`
   display: grid;
   grid-template-rows: 6em min-content;
-  height: 100%;
+  height: 100vh;
+  overflow: scroll;
 
-  @media (min-width: ${themes.screen.s2}) {
+  @media (min-width: ${themes.screen.s3}) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 11fr;

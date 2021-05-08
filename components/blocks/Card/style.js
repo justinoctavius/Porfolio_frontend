@@ -9,10 +9,14 @@ const CardStyled = styled(Block)`
     width: 100%;
   }
 
-  & > div:nth-child(${({ image }) => (image ? 2 : 1)}) {
+  .card_body {
     padding: ${themes.padding.p1};
     display: grid;
     grid-template-rows: 3em 1fr 1em;
+
+    .card_description {
+      scrollbar-width: none;
+    }
 
     & > div:nth-child(3) {
       text-align: right;

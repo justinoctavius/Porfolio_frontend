@@ -3,7 +3,7 @@ import { themes } from '../../../../constants';
 import { Block } from '../../../../styles';
 
 const ImagesPage = styled(Block)`
-  height: 30vh;
+  height: 25em;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -32,14 +32,19 @@ const ImagesPage = styled(Block)`
       width: 100%;
       height: 100%;
       transition: 0.3s;
+      display: flex;
+      justify-content: center;
       img {
-        width: 100%;
-        height: 40vh;
+        height: 100%;
       }
     }
     div:nth-child(${({ selected }) => selected}) {
       left: 0px;
     }
+  }
+
+  @media (min-width: ${themes.screen.s3}) {
+    height: 40em;
   }
 `;
 

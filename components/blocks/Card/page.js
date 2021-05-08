@@ -20,11 +20,11 @@ const CardPage = (props) => {
           <img src={`${env.IMAGES_HOST}/${image}`} />
         </Block>
       )}
-      <Block>
+      <Block className="card_body">
         <Block>
           <H2>{title}</H2>
         </Block>
-        <Block>
+        <Block height="10em" scroll className="card_description">
           <P center>{description}</P>
         </Block>
         {date && (

@@ -3,7 +3,7 @@ import ProjectCollectionStyled from './style';
 
 const ProjectCollection = ({ projects, selected, setSelected }) => {
   return (
-    <ProjectCollectionStyled flex scroll maxW="100vw" p2>
+    <ProjectCollectionStyled flex maxW="100vw" p2>
       {projects?.map((project, index) => (
         <Card
           description={project?.description}

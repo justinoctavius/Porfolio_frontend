@@ -4,6 +4,8 @@ import { Block } from '../../../styles';
 
 const ProjectCollectionStyled = styled(Block)`
   padding: 0px;
+  height: fit-content;
+  overflow-x: scroll;
   & > div {
     margin: 0;
     transition: 0.3s;
@@ -15,7 +17,7 @@ const ProjectCollectionStyled = styled(Block)`
       display: none;
     }
   }
-  @media (min-width: ${themes.screen.s2}) {
+  @media (min-width: ${themes.screen.s3}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content;
@@ -27,7 +29,6 @@ const ProjectCollectionStyled = styled(Block)`
       margin: ${themes.margin.m1};
       & > div {
         width: auto;
-        height: auto;
       }
       h2 {
         padding: ${themes.padding.p1};
