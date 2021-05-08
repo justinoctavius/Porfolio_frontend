@@ -19,7 +19,16 @@ const HomeScreen = () => {
     >
       {datas &&
         datas.map((data) => (
-          <Block m1 border bColor="third" radius2 p3 width="30em" height="50em">
+          <Block
+            m1
+            border
+            bColor="secondary"
+            radius2
+            p3
+            width="30em"
+            height="50em"
+            className="home_card"
+          >
             <Block>
               <H1>
                 <FontAwesomeIcon icon={data.icon} /> <br />
