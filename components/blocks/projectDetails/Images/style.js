@@ -11,6 +11,7 @@ const ImagesPage = styled(Block)`
   display: flex;
   justify-content: center;
   background: ${themes.colors.primary};
+
   .images__Btn {
     position: absolute;
     z-index: 9;
@@ -34,6 +35,7 @@ const ImagesPage = styled(Block)`
       transition: 0.3s;
       display: flex;
       justify-content: center;
+      background-color: ${themes.colors.secondary};
       img {
         height: 100%;
       }

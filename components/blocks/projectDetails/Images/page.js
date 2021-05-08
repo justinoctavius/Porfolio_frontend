@@ -9,7 +9,7 @@ const ImagesPage = ({ images, selected, setNext, setBefore }) => {
   return (
     <ImagesStyled selected={selected}>
       <Button onClick={setBefore} className={'images__Btn prevBtn'}>
-        <Strong>
+        <Strong primary>
           <FontAwesomeIcon icon={faArrowLeft} />
         </Strong>
       </Button>
@@ -22,7 +22,7 @@ const ImagesPage = ({ images, selected, setNext, setBefore }) => {
           ))}
       </Block>
       <Button onClick={setNext} className={'images__Btn nextBtn'}>
-        <Strong>
+        <Strong primary>
           <FontAwesomeIcon icon={faArrowRight} />
         </Strong>
       </Button>
