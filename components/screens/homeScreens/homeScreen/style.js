@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { themes } from '../../../../constants';
 import { colors } from '../../../../constants/themes';
 import { Block, rebooting, scale } from '../../../../styles';
 
 const HomeStyled = styled(Block)`
   flex-wrap: wrap;
   & > div {
-    transition: 0.3s ease;
+    transition: 0.3s;
   }
   & > div:hover {
     transform: scale(1.2);
@@ -20,6 +21,11 @@ const HomeStyled = styled(Block)`
       img {
         width: 100%;
       }
+    }
+  }
+  @media (max-width: ${themes.screen.s4}) {
+    & > div:hover {
+      transform: scale(1);
     }
   }
 `;

@@ -10,7 +10,7 @@ import HomeStyled from './style';
 const HomeScreen = () => {
   return (
     <HomeStyled
-      p3
+      p2
       flex
       height="100%"
       spaceAround
