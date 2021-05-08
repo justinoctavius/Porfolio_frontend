@@ -5,7 +5,7 @@ import ContactScreenStyled from './style';
 
 const ContactScreen = () => {
   return (
-    <Block width="100%" height="100%" bg={'primary'} flex center middle>
+    <Block width="100%" height="100%" bg={'primary'} flex center>
       <ContactScreenStyled
         bg={`${themes.colors.third + '55'}`}
         flex
