@@ -4,6 +4,7 @@ import { Block } from '../../../styles';
 
 const ManageLayoutStyled = styled(Block)`
   & > div {
+    max-width: 100%;
     & > div:nth-child(2) {
       scrollbar-width: none;
     }
