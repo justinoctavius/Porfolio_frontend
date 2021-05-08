@@ -22,6 +22,12 @@ const ContactScreenStyled = styled(Block)`
 
   @media (max-width: ${themes.screen.s4}) {
     width: 80%;
+    .contact_image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 `;
 
