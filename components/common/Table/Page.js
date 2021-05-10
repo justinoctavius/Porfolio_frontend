@@ -4,7 +4,7 @@ import { TableStyled } from './style';
 
 const TablePage = ({ rows, columns, idIndex, selected, setSelected }) => {
   return (
-    <Block bg="secondary">
+    <Block bg="secondary" scroll>
       <TableStyled
         size2
         border={themes.colors.third + '88'}

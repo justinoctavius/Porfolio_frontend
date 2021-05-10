@@ -18,7 +18,9 @@ const AdminElementLayout = ({
         title={title}
         updateUrl={updateUrl}
       />
-      <Block height="100%">{children}</Block>
+      <Block width="100vw" height="100vh" scroll>
+        {children}
+      </Block>
     </Block>
   );
 };
