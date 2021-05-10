@@ -6,7 +6,6 @@ const ProjectScreenStyled = styled(Block)`
   display: grid;
   grid-template-rows: 6em min-content;
   height: 100vh;
-  overflow: scroll;
 
   @media (min-width: ${themes.screen.s3}) {
     display: grid;

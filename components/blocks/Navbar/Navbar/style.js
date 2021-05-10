@@ -68,6 +68,10 @@ const NavbarStyled = styled(Block)`
     }
   }
 
+  .items_box::-webkit-scrollbar {
+    display: ${({ layout }) => layout == 'bottom' && 'none'};
+  }
+
   @media (min-width: ${themes.screen.s2}) {
     .showBtn {
       display: none;
