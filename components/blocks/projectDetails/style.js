@@ -6,11 +6,11 @@ const ProjectDetailsStyled = styled.div`
   top: 10%;
   position: absolute;
   z-index: 9;
-  background-color: ${themes.colors.third + '99'};
+  background-color: ${themes.colors.third};
   display: grid;
   grid-template-rows: 1fr 1fr;
   color: ${themes.colors.secondary};
-  border: 1px solid ${themes.colors.third + '99'};
+  border: 1px solid ${themes.colors.third};
   display: ${({ show }) => !show && 'none'};
   & {
     animation: ${rebooting} 0.5s ease;

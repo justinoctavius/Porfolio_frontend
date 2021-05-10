@@ -4,7 +4,7 @@ import { TableStyled } from './style';
 
 const TablePage = ({ rows, columns, idIndex, selected, setSelected }) => {
   return (
-    <Block bg="secondary" scroll>
+    <Block bg="secondary">
       <TableStyled
         size2
         border={themes.colors.third + '88'}
@@ -32,6 +32,7 @@ const TablePage = ({ rows, columns, idIndex, selected, setSelected }) => {
               {row.map((field, index) => (
                 <td key={index}>
                   <P
+                    className="td_text"
                     maxH="2em"
                     size1
                     scroll

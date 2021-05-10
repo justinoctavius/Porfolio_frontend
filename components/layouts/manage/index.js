@@ -29,7 +29,7 @@ const ManageLayout = ({ mode, title, children, addAction, updateAction }) => {
             {modeUpper} {title}
           </Title>
         </Block>
-        <Block scroll flex center>
+        <Block style={{ overflowY: 'scroll' }} flex center>
           {children}
         </Block>
         <Block flex justifyEnd className="manage_btn">

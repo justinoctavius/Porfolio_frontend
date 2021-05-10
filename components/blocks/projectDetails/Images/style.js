@@ -13,6 +13,8 @@ const ImagesPage = styled(Block)`
   background: ${themes.colors.primary};
 
   .images__Btn {
+    background-color: ${themes.colors.secondary + '88'};
+    border-radius: 50%;
     position: absolute;
     z-index: 9;
   }
@@ -28,20 +30,20 @@ const ImagesPage = styled(Block)`
   }
 
   .images__container {
-    div {
-      left: 100%;
-      width: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    background-color: ${themes.colors.secondary};
+    overflow: hidden;
+    img {
+      position: absolute;
+      left: 200%;
       height: 100%;
-      transition: 0.3s;
-      display: flex;
-      justify-content: center;
-      background-color: ${themes.colors.secondary};
-      img {
-        height: 100%;
-      }
     }
-    div:nth-child(${({ selected }) => selected}) {
-      left: 0px;
+    img:nth-child(${({ selected }) => selected}) {
+      position: static;
     }
   }
 

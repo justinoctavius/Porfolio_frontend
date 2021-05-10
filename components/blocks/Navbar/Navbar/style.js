@@ -53,7 +53,8 @@ const NavbarStyled = styled(Block)`
     right: ${layoutProperties.right};
     left: ${layoutProperties.left};
     bottom: ${layoutProperties.bottom};
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     transition: 0.7s;
     .items {
       display: flex;

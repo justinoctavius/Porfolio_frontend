@@ -9,7 +9,7 @@ import Info from './Info';
 const ProjectDetails = ({ project, show, setShow }) => {
   return (
     <ProjectDetailsStyled show={show}>
-      <ToggleShowBtn show={true} setShow={setShow} className="showBtn" />
+      <ToggleShowBtn p1 show={true} setShow={setShow} className="showBtn" />
       <Images images={project?.images} className={'project__images'} />
       <Block className={'project__detailsContainer'}>
         <Block className={'project__titleBox'}>

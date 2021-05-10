@@ -30,11 +30,12 @@ const borderColor = ({ bColor }) => {
   return colors[bColor] || bColor;
 };
 
-const radius = ({ radius, radius1, radius2, radius3 }) => {
+const radius = ({ radius, radius1, radius2, radius3, radiusMax }) => {
   return (
     (radius1 && themes.radius.r1) ||
     (radius2 && themes.radius.r2) ||
     (radius3 && themes.radius.r3) ||
+    (radiusMax && '50%') ||
     (radius && radius + 'em')
   );
 };

@@ -19,6 +19,9 @@ const TableStyled = styled.table`
     padding: 0.5em;
     border: ${select.border};
   }
+  .td_text::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export { TableStyled };

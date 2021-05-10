@@ -11,7 +11,7 @@ const HomeLayout = ({ children }) => {
       style={{ overflow: 'hidden' }}
     >
       <Header />
-      <Block scroll>{children}</Block>
+      <Block style={{ overflowY: 'scroll' }}>{children}</Block>
       <FooterNavbar />
     </Block>
   );

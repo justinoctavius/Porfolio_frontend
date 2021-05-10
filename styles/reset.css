@@ -83,8 +83,23 @@ body {
 	overflow: hidden;
 }
 
+
+*::-webkit-scrollbar {
+	height: .5em;
+	width: .5em;
+}
+
 * {
-  scrollbar-width: thin;
-	scrollbar-color: #516691 #ddd;
+	scrollbar-width: thin;
+	scrollbar-color: #548cff #ddd;
 	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #548cff;
+	height: .5em;
+	border-radius: 2em;
+}
+*::-webkit-scrollbar-track {
+	background: #ddd;
 }

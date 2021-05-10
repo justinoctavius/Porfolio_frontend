@@ -9,7 +9,7 @@ const ProjectCollection = ({ projects, selected, setSelected }) => {
           description={project?.description}
           image={project?.images[0]?.url}
           title={project?.name}
-          bColor={project?.project_id == selected.id ? 'third' : 'secondary'}
+          bColor={project?.project_id == selected.id ? 'hover' : 'secondary'}
           pointer
           onClick={() => setSelected({ index, id: project.project_id })}
           key={index}
