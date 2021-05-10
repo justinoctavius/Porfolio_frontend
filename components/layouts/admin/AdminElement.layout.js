@@ -17,7 +17,6 @@ const AdminElementLayout = ({
         selected={selected}
         title={title}
         updateUrl={updateUrl}
-        sticky
       />
       <Block width="100vw" height="100%">
         {children}

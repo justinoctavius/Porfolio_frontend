@@ -10,7 +10,7 @@ const AdminHeaderPage = ({
   deleteAction,
 }) => {
   return (
-    <>
+    <Block top="0px" sticky>
       <Block bg={'primary'} flex middle spaceBetween p1>
         <Title m0>{title}</Title>
         <Block display="flex" justify="flex-end" align="center">
@@ -31,7 +31,7 @@ const AdminHeaderPage = ({
           </Button>
         </Block>
       )}
-    </>
+    </Block>
   );
 };
 
