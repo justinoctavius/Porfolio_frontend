@@ -10,15 +10,16 @@ const AdminElementLayout = ({
   title,
 }) => {
   return (
-    <Block height="100%">
+    <Block height="100vh">
       <AdminHeader
         addUrl={addUrl}
         deleteAction={deleteAction}
         selected={selected}
         title={title}
         updateUrl={updateUrl}
+        sticky
       />
-      <Block width="100vw" height="100vh" scroll>
+      <Block width="100vw" height="100%">
         {children}
       </Block>
     </Block>
